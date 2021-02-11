@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="Starter Snowpack App" name="description"/>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/b11e76739c.js"></script>
+    <script defer src="/index.js" type="module"></script>
+    <script defer src="/utility/prism/prism.js"></script>
+    <script defer src="/utility/copy-to-clipboard.js"></script>
+    <script defer src="/components/code-element.js" type="module"></script>
+    <script defer src="/components/nav-bar.js" type="module"></script>
+    <script defer src="/components/video-element.js" type="module"></script>
+    </script>
+    <title>Starter Snowpack App</title>
+</head>
+<body>
+<nav-bar>
+    <span slot="link"><a href="/">Home</a></span>
+    <span slot="link"><a href="/test">Test</a></span>
+</nav-bar>
+<code-element>$require_once __DIR__ . '/../vendor/autoload.php;
+    $containerBuilder = new ContainerBuilder();</code-element>
+
+<main></main>
+</body>
+</html>
