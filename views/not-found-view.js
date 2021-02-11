@@ -1,7 +1,5 @@
-import { html } from 'lit-element';
-import { BaseView } from './base-view.js';
-
-class NotFoundView extends BaseView {
+import { LitElement, html } from 'lit-element';
+class NotFoundView extends LitElement {
     render() {
         return html`
             <style>

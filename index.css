@@ -28,7 +28,7 @@
     --body-font-family: 'Public_Sans', 'Arial', sans-serif;
     --code-font-family: 'JetBrainsMono', sans-serif;
     --public-sans-wght: 200;
-    --type-scale: 0.8;
+    --type-scale: 1;
     --media-phone: 800px;
     --media-tablet: 1090px;
     --media-desktop: 3840px;
@@ -48,6 +48,10 @@
     --c6: #d4c4b3;
     --c7: #f7f4f1;
     --c8: #cccbca;
+    --c-webdeveloper: #eabefc;
+    --c-mobile-developer: #b5ffcb;
+    --c-game-developer: #fff8b5;
+    --c-content-developer: #ffb5c5;
 
 }
 
@@ -63,103 +67,30 @@ body {
     line-height: calc(var(--type-scale) * 1.5);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 700;
-    color: var(--c4);
-    line-height: calc(var(--type-scale) * 1.4);
-    margin-block-start: 1rem;
-    margin-block-end: 1rem;
-}
 
-h1 {
-    font-size: calc(1em * var(--type-scale) * 4);
-}
-
-h2 {
-    font-size: calc(1em * var(--type-scale) * 3);
-}
-
-h3 {
-    font-size: calc(1em * var(--type-scale) * 2);
-}
 
 .code {
     font-family: 'JetBrainsMono';
-    font-size: 1em;
+    font-size: 1rem;
 }
 
+
+
 /* Page content */
-main {
+main, footer {
     max-width: 1090px;
     width: 80%;
     margin: auto;
 }
 
-nav-bar a {
-    color:#fff;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left:2rem;
+footer {
+    display:flex;
+    justify-content: space-between;
+    background-color: var(--c7);
+    padding:1rem;
+    margin-top:1rem;
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
+    min-height: 100px;
 }
 
-
-@media only screen and (max-width: 1090px) {
-
-    /* Grid */
-    main {
-        display: grid;
-        grid-template-areas:
-            'header header'
-            'col-1 col-2'
-    ;
-    }
-
-
-    /* Navbar */
-
-}
-
-@media only screen and (max-width: 770px) {
-
-    /* Grid */
-    main {
-        display: grid;
-        grid-template-areas:
-            'header'
-            'col-1'
-            'col-2';
-
-    }
-
-    @media only screen and (max-width: 600px) {
-
-        /* Grid */
-        main {
-            display: grid;
-            grid-template-areas:
-                'header'
-                'col-1'
-                'col-2';
-            padding: 1rem;
-        }
-
-        /* Navigation */
-        #navbar-hamburger {
-            display: block;
-        }
-
-        .navbar-menu {
-            display: none;
-        }
-
-        #navbar-menu > .menu-item {
-            border-bottom: white 1px solid;
-            padding: 1rem;
-        }
-    }
-}

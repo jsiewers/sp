@@ -1,7 +1,6 @@
-import { html } from 'lit-element';
-import { BaseView } from './base-view.js';
+import { LitElement, html } from 'lit-element';
 
-class TestView extends BaseView {
+class TestView extends LitElement {
     render() {
         return html`
       <h1>Test View</h1>

@@ -1,53 +1,54 @@
-let CardElementTemplate = document.createElement('template');
-CardElementTemplate.innerHTML = `  
-         <style>
-            .card {
-                /*border:1px solid black;*/
+import {
+    LitElement,
+    html,
+    css
+} from 'lit-element';
+class CardElement extends LitElement {
+    static get properties() {
+        return {
+            href: {
+                attribute: true
+            },
+        };
+    }
+
+    static get styles() {
+        return css ` 
+         
+            #card {
                 border-radius:16px;
                 padding:1rem;
                 box-shadow: 3px 3px 5px 1px #cccbca;
+                background-color:var(--c7);
+                color:var(--c4);
             }
-            div {
-                float:right;
-                color:blue;
+  
+            #title {
+                font-weight:700;
+           }
+            a {
+                color:var(--c4);
+                text-decoration: none;
             }
             
-            .description {
-                font-weight:500;
+            ::slotted(a) {
+                color: #fff;
+             }
+                        
+            #link {
+                 text-align:right;
             }
-            a {
-                color:var(--c3);
-                text-decoration: none;
-                font-weight:500;
-            }
-        </style>
-        
-        <p class="description"><slot name="description">De description</slot></p>
-        <p><slot name="body">Donec ut mattis diam, vel mollis erat. Cras elit metus, laoreet at ultricies ac, finibus
-            suscipit
-            ante.</slot></p>
-         <div id="link"><a href="#">Lees meer...</a></div>
-       `;
+    `
+    };
 
-export class CardElement extends HTMLElement {
-    constructor() {
-        super();
-
-        let shadowRoot = this.attachShadow({
-            mode: 'open'
-        }).appendChild(CardElementTemplate.content.cloneNode(true));
-    }
-
-    addLink(evt, elem) {
-        var url = "#" + elem.dataset.href;
-        console.log(url);
-        window.location.assign(url);
-        evt.preventDefault();
-    }
-
-    connectedCallback() {
-        console.log("connected callback in card-element aangeroepen");
-        let link = this.shadowRoot.getElementById("link");
-        link.addEventListener('click', (e) => this.addLink(e, this));
+    render() {
+        return html `
+            <div id="card">
+                <p id="title"><slot name="title">title</slot></p>
+                <p><slot name="text">text</slot></p>
+                <div id="link"><a href="${ this.href }"><slot name="link">link</slot></a></div>
+            </div>
+        `;
     }
 }
+customElements.define('card-element', CardElement);
