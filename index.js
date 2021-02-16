@@ -1,6 +1,7 @@
 import './views/not-found-view.js';
 import './views/index-view.js';
 import './views/leertrajecten/content-developer-view.js';
+import './views/leertrajecten/full-stack-developer-view.js';
 import './views/courses/course-php-view.js';
 import './views/test-view.js';
 
@@ -25,6 +26,10 @@ function initRouter() {
         {
             path: '/content-developer',
             component: 'content-developer-view',
+        },
+        {
+            path: '/full-stack-developer',
+            component: 'full-stack-developer-view',
         },
         {
             path: '/course-php',

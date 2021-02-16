@@ -67,8 +67,12 @@ class CoursePhpView extends LitElement {
             <span slot="col-1">
                 <h3>Dit is dan een tussenkopje</h3>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur viverra scelerisque magna ac tincidunt. Donec in posuere turpis. Integer aliquam vulputate fermentum. Aenean sagittis iaculis fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam placerat augue in felis ultricies, nec vehicula turpis dictum. Duis eu mi at ipsum faucibus lacinia at et ipsum. Nullam aliquet turpis et sollicitudin tincidunt. Praesent quis nulla sapien. Donec ullamcorper quam vel purus eleifend, a sagittis erat vulputate. Integer pellentesque varius lobortis. Mauris nec rutrum elit, a venenatis nibh. In tempus eget metus accumsan malesuada. Donec tincidunt fermentum risus non maximus. Nunc elementum et odio et placerat.
-                <code-element>$var = 12;
-                echo $var;
+                <code-element>
+$var = 12;
+echo $var;
+function helloWorld() {
+    echo "hello world!"
+}
             </code-element>
             </span>
             

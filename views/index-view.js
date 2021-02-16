@@ -9,7 +9,7 @@ import {
 
 class IndexView extends LitElement {
     static get styles() {
-        return css ` 
+        return css `
 
 
 
@@ -19,7 +19,7 @@ class IndexView extends LitElement {
 
     render() {
         return html `
-        
+
         <article-head>
             <span slot="author">Jan Jaap Siewers</span>
             <span slot="date">11-02-2021</span>
@@ -31,7 +31,7 @@ class IndexView extends LitElement {
                 <span slot="text">
                 <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.</checked-item>
                 <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.</checked-item>
-                
+
                     </span>
                 <span slot="link"></span>
             </card-element>
@@ -41,23 +41,17 @@ class IndexView extends LitElement {
                 ${ this.camera }Het opzetten van een workflow in Git.
                     Dit is nuttig voor vrijwel ieder team dat zich met software-ontwikkeling bezig houdt.
                     Welke workflow het beste past bij een team, hangt helemaal af van de werkwijze van een team. Wijk gerust af van de voorgestelde werkwijze in de cursus als dat beter past.
-                        </ul>
-                    </ul>
                 </span>
                 <span slot="link"></span>
             </card-element>
-            <card-element href="/">
-                <span slot="title">Doel van de cursus</span>
-                <span slot="text">Het opzetten van een workflow in Git is nuttig voor vrijwel ieder team dat zich met software-ontwikkeling bezig houdt. Welke workflow het beste past bij een team, hangt helemaal af van de werkwijze van een team. Wijk gerust af van de voorgestelde werkwijze in de cursus als dat beter past.</span>
-                <span slot="link"></span>
-            </card-element>
             <card-element href="/test">
-                <span slot="title">Bij welke leerpaden past deze cursus:</span>
+                <span slot="title">Dit zijn de leertrajecten die we aanbieden</span>
                 <span slot="text">
                 <tag-element color="var(--c-webdeveloper)" href="/webdeveloper">webdeveloper</tag-element>
                 <tag-element color="var(--c-mobile-developer)" href="/mobile-developer">mobile-developer</tag-element>
                 <tag-element color="var(--c-game-developer)" href="/game-developer">game-developer</tag-element>
                 <tag-element color="var(--c-content-developer)" href="/content-developer">content-developer</tag-element>
+                <tag-element color="var(--c-full-stack-developer)" href="/full-stack-developer">full-stack-developer</tag-element>
                 </span>
                 <span slot="link"></span>
             </card-element>
@@ -76,7 +70,7 @@ class IndexView extends LitElement {
             <span slot="text">kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f </span>
         </course-element>
         <course-element video="16" onderwerpen="2" projecten="12" src="img/courses/course_php8_beginners.svg">
-            <span slot="title"></fa-icon>Beginnerscursus PHP 8</span>
+            <span slot="title">Beginnerscursus PHP 8</span>
             <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
             </span>
         </course-element>

@@ -52,7 +52,7 @@
     --c-mobile-developer: #b5ffcb;
     --c-game-developer: #fff8b5;
     --c-content-developer: #ffb5c5;
-
+    --c-full-stack-developer:#79b7ff;
 }
 
 body {
@@ -93,4 +93,3 @@ footer {
     border-top-right-radius:16px;
     min-height: 100px;
 }
-
