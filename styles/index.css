@@ -3,14 +3,14 @@
     font-family:'JetBrainsMono';
     font-weight: 100 900;
     font-style: normal;
-    src:url('fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+    src:url('../fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
     font-display: swap;
 }
 @font-face {
     font-family:'Public_Sans';
     font-weight: 100 900;
     font-style: normal;
-    src:url('fonts/PublicSans-VariableFont_wght.ttf') format('truetype');
+    src:url('../fonts/PublicSans-VariableFont_wght.ttf') format('truetype');
     font-display: swap;
 }
 
@@ -18,7 +18,7 @@
     font-family:'Public_Sans';
     font-weight: 100 900;
     font-style: italic;
-    src:url('fonts/PublicSans-Italic-VariableFont_wght.ttf') format('truetype');
+    src:url('../fonts/PublicSans-Italic-VariableFont_wght.ttf') format('truetype');
     font-display: swap;
 }
 
@@ -48,11 +48,11 @@
     --c6: #d4c4b3;
     --c7: #f7f4f1;
     --c8: #cccbca;
-    --c-webdeveloper: #eabefc;
-    --c-mobile-developer: #b5ffcb;
-    --c-game-developer: #fff8b5;
-    --c-content-developer: #ffb5c5;
-    --c-full-stack-developer:#79b7ff;
+    --c-webdeveloper: #ccc;
+    --c-mobile-developer: #4a8d9b;
+    --c-game-developer: #f1ca6b;
+    --c-content-developer: #ffd900;
+    --c-full-stack-developer:#00b9d4;
 }
 
 body {
@@ -77,7 +77,7 @@ body {
 
 
 /* Page content */
-main, footer {
+footer {
     max-width: 1090px;
     width: 80%;
     margin: auto;

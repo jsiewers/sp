@@ -6,9 +6,6 @@ import {
 class TagElement extends LitElement {
     static get properties() {
         return {
-            leerpad: {
-                attribute: true
-            },
             href: {
                 attribute: true
             },
@@ -19,7 +16,7 @@ class TagElement extends LitElement {
     }
 
     static get styles() {
-        return css ` 
+        return css `
             :host {
                 display:inline;
                 margin-right:5px;
@@ -36,7 +33,7 @@ class TagElement extends LitElement {
                 line-height: calc(1em * var(--type-scale) * 2.3);
                 font-weight:700;
             }
-  
+
             #title {
                 font-weight:700;
            }
@@ -44,11 +41,11 @@ class TagElement extends LitElement {
                 color:var(--c4);
                 text-decoration: none;
             }
-            
+
             ::slotted(a) {
                 color: #fff;
              }
-                        
+
             #link {
                  text-align:right;
             }
@@ -58,7 +55,7 @@ class TagElement extends LitElement {
     render() {
         return html `
             <div id="tag" style="background-color:${ this.color }">
-                <span id="link"><a href="${ this.href }"><slot>${ this.leerpad }</slot></a></span>
+                <span id="link"><a href="${ this.href }"><slot>Titel</slot></a></span>
             </div>
         `;
     }

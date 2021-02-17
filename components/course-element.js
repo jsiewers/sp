@@ -25,14 +25,14 @@ class CourseElement extends LitElement {
     }
 
     static get styles() {
-        return css ` 
-         
+        return css `
+
          #learnpath {
             display: grid;
             grid-template-columns: 1fr 6fr;
 
         }
-        
+
         #path {
             display: flex;
             align-items: stretch;
@@ -41,7 +41,7 @@ class CourseElement extends LitElement {
             flex-direction: column;
 
         }
-        
+
         article {
             padding: 1rem;
         }
@@ -69,6 +69,9 @@ class CourseElement extends LitElement {
         }
 
         #icon {
+            postition:relative;
+            height:100%;
+            width:100%;
             background-repeat: no-repeat;
             background-size:90%;
             background-position: center;
@@ -112,8 +115,9 @@ class CourseElement extends LitElement {
             margin-right:1rem;
             vertical-align:top;
         }
-        
-        a {
+
+
+        #title > a {
                 color:var(--c4);
                 text-decoration: none;
         }
@@ -130,9 +134,13 @@ class CourseElement extends LitElement {
                     <div class="line grow-3"></div>
                 </div>
                 <div id="coursewrapper">
-                    <div id="course">
-                        <div id="icon" style="background-image: url('${ this.src }')" alt="css course"></div>
-                        <article>
+                    <div id="course"><a href="${ this.href }">
+                        <div id="icon"
+                          style="background-image: url('${ this.src }')"
+                          alt="css course">
+                        </div>
+                      </a>
+                         <article>
                             <div id="title">
                                 <a href="${ this.href }"><slot name="title">title</slot></a>
                             </div>
@@ -143,20 +151,11 @@ class CourseElement extends LitElement {
                                 <span><fa-icon class="fab fa-youtube"></fa-icon><slot name="video">${ this.video }</slot> uur video</span>
                                 <span><fa-icon class="far fa-file"></fa-icon><slot name="onderwerpen">${ this.onderwerpen }</slot> uur onderwerpen</span>
                                 <span><fa-icon class="fas fa-project-diagram"></fa-icon><slot name="projecten">${ this.projecten }</slot> uur opdrachten en projecten</span>
-                            </div>         
+                            </div>
                         </article>
-                    </div> <!-- course -->        
+                    </div> <!-- course -->
                 </div><!-- wrapper -->
             </div><!-- learnpath -->        `;
     }
 }
 customElements.define('course-element', CourseElement);
-
-
-
-
-
-
-
-
-

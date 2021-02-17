@@ -7,7 +7,7 @@ import {
 
 
 
-class FullStackDeveloperView extends LitElement {
+class ContentDeveloperView extends LitElement {
     static get styles() {
         return css `
             `
@@ -15,29 +15,42 @@ class FullStackDeveloperView extends LitElement {
 
     render() {
         return html `
-        <article-head>
+        <article-head img="">
             <span slot="author">Jan Jaap Siewers</span>
-            <span slot="date">15-02-2021</span>
-            <span slot="header">Full stack developer</span>
+            <span slot="date">11-02-2021</span>
+            <span slot="header">Content developer</span>
         </article-head>
         <article-element>
-            <span slot="header">Wat is een full stack developer</span>
+            <span slot="header">Wat is een content developer</span>
             <span slot="col-1">
-                <h3>Wat doet een full stack developer</h3>
-                Een full stack developer programeert alle applicatie-onderdelen van zowel de front- als de back-end. Full stack programmeurs zijn meestal meer gefocussed op de techniek. Met name de back-end krijgt de meeste aandacht. Full stack programmeurs zijn thuis in meerdere programmeertalen omdat in de back-end vaak andere talen worden gebruikt dan in het front-end gedeelte.
+                <h3>Wat doet een content developer</h3>
+                Content Developers research, prepare, write, and edit online content for marketing and front-end web development. They are involved in the writing of blog posts, static copy, and video content and well as the technical aspects, such as SEO and HTML formatting.
             </span>
             <span slot="col-2">
-                <h3>Wat voor een type mens is een full stack developer</h3>
-                Een full stack developer is een allrouder. Hij wil graag van alles wat weten. Hij weet hoe je een eenvoudig front-end voor een applicatie bouwt. Maar hij is vooral goed in het werken met databases en applicatieservers.
+                <h3>Wat voor een type mens is een content developer</h3>
+                The responsibilities of the Content Developer include creating original content for our website and advertising that includes copywriting, graphics, and technical work. The Content Developer must also adhere to SEO best practices.
+                To be successful as a Content Developer, you should have great communication, research, and teamwork skills. Ultimately, a top-notch Content Developer has a good working knowledge of content management software as well as a basic knowledge of HTML and an eye for detail.
             </span>
         </article-element>
         <article-element>
-            <span slot="header">Wat kan een full stack developer</span>
+            <span slot="header">Wat kan een content developer</span>
             <span slot="col-1">
-                In dit leertraject leer je een beetje front-end, maar de focus ligt vooral op het programmeren van back-end technologie. Denk hierbij aan het werken met gegevens in databases. Het werken met middleware applicaties die zijn gebouwd in php, java of nodejs.
+                <h3>Welke verantwoordelijkheden heeft een content developer</h3>
+                Coming up with content goals and strategies and pitching ideas to the Marketing and Communications Directors. Collaborating with other departments and team members and brainstorming subjects for creative content. Creating unique, simple-to-understand, and user-friendly content using good SEO techniques.
+                Writing new web content and editing existing content.
+                Editing and proofreading new content before publication.
+                Managing the distribution of content through our various channels, including social media.
+                Analyzing performance indicators and web traffic and determining the effectiveness of created content.
             </span>
             <span slot="col-2">
-                Een full stack developer moet kunnen putten uit een flinke kist gereedschap. Hij is een ster in meerdere programmeertalen en hij overziet de total applicatie.
+                <h3>Welke skills en diploma's heeft een content developer nodig</h3>
+                Associate's or Bachelor's degree in Computer Science, Marketing, Mass Communication, or a related field.
+                Experience in Copywriting, Graphic Design, Programming, or a related field may be advantageous.
+                Strong working knowledge of content management software, including Asana, WordPress, Photoshop, and Flash.
+                Good working knowledge of HTML and SEO.
+                Excellent written and verbal communication skills.
+                Strong attention to detail, multitasking, and analytical skills.
+                Ability to work independently and as part of a team.
             </span>
         </article-element>
         <article-element>
@@ -47,14 +60,7 @@ class FullStackDeveloperView extends LitElement {
             <span slot="col-2">
             </span>
         </article-element>
-        <course-element video="??" onderwerpen="??" projecten="??" src="img/courses/course_git.svg">
-            <span slot="title">
-            Leren werken met versiebeheer in Git
-            </span>
-            <span slot="text">
-              Deze cursus is voor beginnende programmeurs die niet graag hun werk kwijt raken of per ongeluk code weggooien. Je kunt het geloven of niet, maar het gebeurt bijna bij iedere startende programmeur. Git is de oplossing en het is niet meer weg te denken bij vrijwel ieder software project.<br />
-            </span>
-        </course-element>        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_html5.svg" href="/course-html5">
+        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_html5.svg" href="/course-html5">
             <span slot="title">
               Beginnerscursus HTML5
             </span>
@@ -77,7 +83,7 @@ class FullStackDeveloperView extends LitElement {
             </span>
         </course-element>
         <course-element video="2" onderwerpen="1" projecten="5" src="img/courses/course_seo.svg">
-            <span slot="title">SEO</span>
+            <span slot="title"><SEO</span>
             <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
             </span>
         </course-element>
@@ -95,4 +101,4 @@ class FullStackDeveloperView extends LitElement {
     }
 }
 
-customElements.define('full-stack-developer-view', FullStackDeveloperView);
+customElements.define('content-developer-view', ContentDeveloperView);

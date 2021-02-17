@@ -7,20 +7,18 @@ import 'fa-icons';
 
 class CheckedItem extends LitElement {
      static get styles() {
-        return css ` 
+        return css `
         div#check {
             display:flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             margin-bottom:1rem;
         }
 
         div#icon {
             margin-right:1rem;
             color:green;
+            width:30px;
         }
-
-
-    
     `
     };
 
@@ -28,7 +26,7 @@ class CheckedItem extends LitElement {
         return html `
             <div id="check">
                 <div id="icon"><fa-icon class="fas fa-check"></fa-icon> </div>
-                <div><slot></slot></div>
+                <div id="text"><slot></slot></div>
             </div>
         `;
     }

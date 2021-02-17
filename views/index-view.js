@@ -4,43 +4,42 @@ import {
     css
 } from 'lit-element';
 
+import { mainStyles } from '../styles/main-styles.js';
+
 
 
 
 class IndexView extends LitElement {
     static get styles() {
-        return css `
-
-
-
-            `
+        return mainStyles
     };
 
 
     render() {
         return html `
-
-        <article-head>
+        <article-head img="../img/learningpaths/index-developer.svg">
             <span slot="author">Jan Jaap Siewers</span>
             <span slot="date">11-02-2021</span>
             <span slot="header">Meer leren over design, IT en software development</span>
         </article-head>
+        <section>
         <card-panel>
             <card-element href="/">
                 <span slot="title">Voor wie bestemd:</span>
                 <span slot="text">
-                <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.</checked-item>
-                <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.</checked-item>
-
-                    </span>
+                  <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.
+                  </checked-item>
+                  <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.
+                  </checked-item>
+                </span>
                 <span slot="link"></span>
             </card-element>
             <card-element href="/">
                 <span slot="title">Wat ga je leren</span>
                 <span slot="text">
-                ${ this.camera }Het opzetten van een workflow in Git.
-                    Dit is nuttig voor vrijwel ieder team dat zich met software-ontwikkeling bezig houdt.
-                    Welke workflow het beste past bij een team, hangt helemaal af van de werkwijze van een team. Wijk gerust af van de voorgestelde werkwijze in de cursus als dat beter past.
+                  Het opzetten van een workflow in Git.
+                  Dit is nuttig voor vrijwel ieder team dat zich met software-ontwikkeling bezig houdt.
+                  Welke workflow het beste past bij een team, hangt helemaal af van de werkwijze van een team. Wijk gerust af van de voorgestelde werkwijze in de cursus als dat beter past.
                 </span>
                 <span slot="link"></span>
             </card-element>
@@ -65,7 +64,7 @@ class IndexView extends LitElement {
             <h3>Dit is dan een tussenkopje</h3>
             In hac habitasse platea dictumst. Praesent bibendum sapien purus, nec euismod sem ultrices at. Praesent in euismod neque. Vivamus at finibus erat, non ultrices quam. Ut vel risus ac ligula sodales lacinia eu at mauris. Ut ornare velit vitae dapibus semper. Praesent et lobortis est, eget accumsan odio. Duis eget pellentesque felis, vel convallis sapien. Sed tempus mauris ac elit ullamcorper, a fermentum nisl imperdiet.</span>
         </article-element>
-        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_css.svg">
+        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_css3.svg">
             <span slot="title">Starten met CSS3</span>
             <span slot="text">kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f </span>
         </course-element>
@@ -74,7 +73,8 @@ class IndexView extends LitElement {
             <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
             </span>
         </course-element>
-        `;
+        <section>
+      `;
     }
 }
 
