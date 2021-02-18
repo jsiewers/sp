@@ -1,17 +1,17 @@
-import {
-    LitElement,
-    html,
-    css
-} from 'lit-element';
-import { mainStyles } from '../../styles/main-styles.js';
+import { BaseLearningpathView } from './base-learningpath-view.js';
+import {  html } from 'lit-element';
 
-
-
-
-class FullStackDeveloperView extends LitElement {
-    static get styles() {
-      return mainStyles
+class FullStackDeveloperView extends BaseLearningpathView {
+  static get properties() {
+    return {
+        selectedCourses: { type: Array }
     };
+  }
+
+  constructor() {
+    super();
+    this.selectedCourses = ["GIT", "HTML", "CSS", "SCRUM", "GITHUB", "JS", "PHP", "MYSQL", "MYSQL_DESIGN", "OOPHP", "PHPFW", "LINUX", "DEVOPS"];
+  }
 
     render() {
         return html `
@@ -50,33 +50,9 @@ class FullStackDeveloperView extends LitElement {
           <span slot="col-1">
             <card-element>
                   <span slot="title">Welke onderwerpen komen aan bod.</span>
-                  <span slot="text">
-                    <p>In dit leertraject leer je een beetje front-end, maar de focus ligt vooral op het programmeren van back-end technologie. Denk hierbij aan het werken met gegevens in databases en server-side technologieën als PHP, Java en/of NodeJS.</p>
-                    <checked-item>
-                      Git versiebeheer en versiebeheer met teams
-                    </checked-item>
-                    <checked-item>
-                     Server-side programmeren met PHP en PDO
-                    </checked-item>
-                    <checked-item>
-                     Database queries maken en databases ontwerpen
-                    </checked-item>
-                    <checked-item>
-                     Object georiënteerd programmeren in  PHP
-                    </checked-item>
-                    <checked-item>
-                     Werken met MVC frameworks in  PHP
-                    </checked-item>
-                    <checked-item>
-                     Testen en security
-                    </checked-item>
-                    <checked-item>
-                     Basis linux installatie en commando's
-                    </checked-item>
-                    <checked-item>
-                     Inrichten van een webserver in linux
-                    </checked-item>
-                  </span>
+                    <span slot="text">
+                      <p>In dit leertraject leer je een beetje front-end, maar de focus ligt vooral op het programmeren van back-end technologie. Denk hierbij aan het werken met gegevens in databases en server-side technologieën als PHP, Java en/of NodeJS.</p>
+                    </span>
                   <span slot="link"> </span>
               </card-element>
           </span>
@@ -106,76 +82,15 @@ class FullStackDeveloperView extends LitElement {
             </span>
         </article-element>
         <h1>Leertraject</h1>
-        <course-element video="??" onderwerpen="??" projecten="??" src="img/courses/course_git.svg">
+        ${ this.selectFilter(this.selectedCourses).map(course => html`
+          <course-element video="${ course.video }" onderwerpen="${ course.subjects }" projecten="${ course.projects }" src="../../img/courses/${ course.img }">
             <span slot="title">
-            Leren werken met versiebeheer in Git
+              ${ course.title }
             </span>
             <span slot="text">
-              Deze cursus is voor beginnende programmeurs die niet graag hun werk kwijt raken of per ongeluk code weggooien. Je kunt het geloven of niet, maar het gebeurt bijna bij iedere startende programmeur. Git is de oplossing en het is niet meer weg te denken bij vrijwel ieder software project.<br />
+              ${ course.text }
             </span>
-        </course-element>
-        <course-element video="??" onderwerpen="??" projecten="??" src="img/courses/course_github.svg">
-            <span slot="title">
-            Teamwork in Git en Github
-            </span>
-            <span slot="text">
-              Git voor gevorderden. In de cursus komt aan de orde hoe je met een team volgens scrum-methodiek kunt werken met Github Projects en Git versiebeheer<br />
-            </span>
-        </course-element>
-        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_html5.svg" href="/course-html5">
-            <span slot="title">
-              Beginnerscursus HTML5
-            </span>
-            <span slot="text">
-              kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f
-            </span>
-        </course-element>
-        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_css3.svg" href="/course-css">
-            <span slot="title">Starten met CSS3</span>
-            <span slot="text">kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f </span>
-        </course-element>
-        <course-element video="16" onderwerpen="2" projecten="12" src="img/courses/course_php8_beginners.svg" href="/course-php">
-            <span slot="title">Beginnerscursus PHP 8</span>
-            <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
-            </span>
-        </course-element>
-        <course-element video="16" onderwerpen="2" projecten="12" src="img/courses/course_wp.svg">
-            <span slot="title">Wordpress</span>
-            <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
-            </span>
-        </course-element>
-        <course-element video="2" onderwerpen="1" projecten="5" src="img/courses/course_seo.svg">
-            <span slot="title">SEO</span>
-            <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
-            </span>
-        </course-element>
-        <course-element video="16" onderwerpen="2" projecten="12" src="img/courses/course_wp_php.svg">
-            <span slot="title">
-            Wordpress plugins en thema's met CSS en PHP
-            </span>
-            <span slot="text">
-              Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
-
-            </span>
-        </course-element>
-        <course-element video="??" onderwerpen="??" projecten="??" src="img/courses/course_linux.svg">
-            <span slot="title">
-            Linux voor developers
-            </span>
-            <span slot="text">
-              Deze cursus is voor developers die een eigen server willen installeren en beheren. Je leert te werken met Apache, OpenSSH en meer.<br />
-
-            </span>
-        </course-element>
-        <course-element video="??" onderwerpen="??" projecten="??" src="img/courses/course_javascript.svg">
-            <span slot="title">
-              Beginnen met Javascript
-            </span>
-            <span slot="text">
-              Deze cursus is voor de startende web- en front-end developer.Je leert de basisvaardigheden van javascript
-
-            </span>
-        </course-element>
+          </course-element>`)}
         </section>
         `;
     }

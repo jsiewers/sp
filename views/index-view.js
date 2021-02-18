@@ -23,38 +23,6 @@ class IndexView extends LitElement {
             <span slot="header">Meer leren over design, IT en software development</span>
         </article-head>
         <section>
-        <card-panel>
-            <card-element href="/">
-                <span slot="title">Voor wie bestemd:</span>
-                <span slot="text">
-                  <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.
-                  </checked-item>
-                  <checked-item>Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.
-                  </checked-item>
-                </span>
-                <span slot="link"></span>
-            </card-element>
-            <card-element href="/">
-                <span slot="title">Wat ga je leren</span>
-                <span slot="text">
-                  Het opzetten van een workflow in Git.
-                  Dit is nuttig voor vrijwel ieder team dat zich met software-ontwikkeling bezig houdt.
-                  Welke workflow het beste past bij een team, hangt helemaal af van de werkwijze van een team. Wijk gerust af van de voorgestelde werkwijze in de cursus als dat beter past.
-                </span>
-                <span slot="link"></span>
-            </card-element>
-            <card-element href="/test">
-                <span slot="title">Dit zijn de leertrajecten die we aanbieden</span>
-                <span slot="text">
-                <tag-element color="var(--c-webdeveloper)" href="/webdeveloper">webdeveloper</tag-element>
-                <tag-element color="var(--c-mobile-developer)" href="/mobile-developer">mobile-developer</tag-element>
-                <tag-element color="var(--c-game-developer)" href="/game-developer">game-developer</tag-element>
-                <tag-element color="var(--c-content-developer)" href="/content-developer">content-developer</tag-element>
-                <tag-element color="var(--c-full-stack-developer)" href="/full-stack-developer">full-stack-developer</tag-element>
-                </span>
-                <span slot="link"></span>
-            </card-element>
-        </card-panel>
         <article-element>
             <span slot="header">Ja daar gaan we weer voor de zoveelste keer!! Deze gaat over de gehele breedte!!</span>
             <span slot="col-1">
@@ -64,6 +32,36 @@ class IndexView extends LitElement {
             <h3>Dit is dan een tussenkopje</h3>
             In hac habitasse platea dictumst. Praesent bibendum sapien purus, nec euismod sem ultrices at. Praesent in euismod neque. Vivamus at finibus erat, non ultrices quam. Ut vel risus ac ligula sodales lacinia eu at mauris. Ut ornare velit vitae dapibus semper. Praesent et lobortis est, eget accumsan odio. Duis eget pellentesque felis, vel convallis sapien. Sed tempus mauris ac elit ullamcorper, a fermentum nisl imperdiet.</span>
         </article-element>
+        <card-panel>
+          <photo-card learningpath="game-developer">
+            <span slot="title">Game developer</span>
+            <span slot="text">Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.</span>
+          </photo-card>
+          <photo-card learningpath="content-developer">
+            <span slot="title">Content developer</span>
+            <span slot="text">Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projects.o's en je gaat werken git projects.o's en je gaat werken git projects.o's en je gaat werken git projects.o's en je gaat werken git projects.o's en je gaat werken git projects.</span>
+          </photo-card>
+          <photo-card learningpath="full-stack-developer">
+            <span slot="title">Full-stack developer</span>
+            <span slot="text">Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projeects.</span>
+          </photo-card>
+          <photo-card learningpath="web-developer">
+            <span slot="title">Web developer</span>
+            <span slot="text">Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projeects.</span>
+          </photo-card>
+          <card-element href="/test">
+              <span slot="title">Dit zijn de leertrajecten die we aanbieden</span>
+              <span slot="text">
+              <tag-element color="var(--c-webdeveloper)" href="/webdeveloper">webdeveloper</tag-element>
+              <tag-element color="var(--c-mobile-developer)" href="/mobile-developer">mobile-developer</tag-element>
+              <tag-element color="var(--c-game-developer)" href="/game-developer">game-developer</tag-element>
+              <tag-element color="var(--c-content-developer)" href="/content-developer">content-developer</tag-element>
+              <tag-element color="var(--c-full-stack-developer)" href="/full-stack-developer">full-stack-developer</tag-element>
+              </span>
+              <span slot="link"></span>
+          </card-element>
+        </card-panel>
+
         <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_css3.svg">
             <span slot="title">Starten met CSS3</span>
             <span slot="text">kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f </span>

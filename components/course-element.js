@@ -149,8 +149,8 @@ class CourseElement extends LitElement {
                             </div>
                             <div id="info">
                                 <span><fa-icon class="fab fa-youtube"></fa-icon><slot name="video">${ this.video }</slot> uur video</span>
-                                <span><fa-icon class="far fa-file"></fa-icon><slot name="onderwerpen">${ this.onderwerpen }</slot> uur onderwerpen</span>
-                                <span><fa-icon class="fas fa-project-diagram"></fa-icon><slot name="projecten">${ this.projecten }</slot> uur opdrachten en projecten</span>
+                                <span><fa-icon class="far fa-file"></fa-icon><slot name="onderwerpen">${ this.onderwerpen }</slot> onderwerpen</span>
+                                <span><fa-icon class="fas fa-project-diagram"></fa-icon><slot name="projecten">${ this.projecten }</slot> opdrachten en projecten</span>
                             </div>
                         </article>
                     </div> <!-- course -->

@@ -1,8 +1,5 @@
-import {
-    LitElement,
-    html,
-    css
-} from 'lit-element';
+import { LitElement, html, css } from 'lit-element';
+
 class CardElement extends LitElement {
     static get properties() {
         return {
@@ -13,8 +10,8 @@ class CardElement extends LitElement {
     }
 
     static get styles() {
-        return css ` 
-         
+        return css `
+
             #card {
                 border-radius:16px;
                 padding:1rem;
@@ -22,7 +19,7 @@ class CardElement extends LitElement {
                 background-color:var(--c7);
                 color:var(--c4);
             }
-  
+
             #title {
                 font-weight:700;
            }
@@ -30,11 +27,11 @@ class CardElement extends LitElement {
                 color:var(--c4);
                 text-decoration: none;
             }
-            
+
             ::slotted(a) {
                 color: #fff;
              }
-                        
+
             #link {
                  text-align:right;
             }
