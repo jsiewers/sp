@@ -45,24 +45,29 @@ class IndexView extends LitElement {
             <span slot="title">Full-stack developer</span>
             <span slot="text">Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projeects.</span>
           </photo-card>
-          <photo-card learningpath="web-developer">
-            <span slot="title">Web developer</span>
+          <photo-card learningpath="frontend-developer">
+            <span slot="title">Frontend developer</span>
             <span slot="text">Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projeects.</span>
           </photo-card>
-          <card-element href="/test">
+          <photo-card learningpath="interaction-designer">
+            <span slot="title">Interaction designer</span>
+            <span slot="text">Deze cursus is voor iedereen die al enige ervaring heeft met Git en in een team wil gaan werken. In deze cursus leer je werken met standaard git commando's en je gaat werken git projeects.</span>
+          </photo-card>
+          <!-- <card-element href="/test">
               <span slot="title">Dit zijn de leertrajecten die we aanbieden</span>
               <span slot="text">
-              <tag-element color="var(--c-webdeveloper)" href="/webdeveloper">webdeveloper</tag-element>
+              <tag-element color="var(--c-frontend-developer)" href="/frontend-developer">frontend-developer</tag-element>
               <tag-element color="var(--c-mobile-developer)" href="/mobile-developer">mobile-developer</tag-element>
               <tag-element color="var(--c-game-developer)" href="/game-developer">game-developer</tag-element>
               <tag-element color="var(--c-content-developer)" href="/content-developer">content-developer</tag-element>
               <tag-element color="var(--c-full-stack-developer)" href="/full-stack-developer">full-stack-developer</tag-element>
+              <tag-element color="var(--c-interaction-designer)" href="/interaction-designer">interaction-designer</tag-element>
               </span>
               <span slot="link"></span>
-          </card-element>
+          </card-element>-->
         </card-panel>
 
-        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_css3.svg">
+        <!-- <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_css3.svg">
             <span slot="title">Starten met CSS3</span>
             <span slot="text">kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f </span>
         </course-element>
@@ -70,7 +75,7 @@ class IndexView extends LitElement {
             <span slot="title">Beginnerscursus PHP 8</span>
             <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
             </span>
-        </course-element>
+        </course-element> -->
         <section>
       `;
     }

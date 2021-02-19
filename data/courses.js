@@ -143,10 +143,19 @@ export const courses = [
   {
     tags:["full-stack-developer", "web-developer"],
     title: "DevOps met Linux",
-
     code: "DEVOPS",
     img: "../../img/courses/course_linux_pro.svg",
     text: "Webapplicaties en games kun je via internet benaderen. Maar hoe komen ze daar? In deze cursus leer je hoe je een server inricht en hoe je die koppelt aan internet, zodat de hele wereld gebruik kan maken van je applicaties. In de cursus wordt ook aandacht besteed aan continuous integration en deployment. Hier gaat het om het continu nieuwe feautures kunnen implementeren en er voor zorgen dat je gebruikers zonder oponthoud van je appliciaties gebruik kunnen blijven maken",
+    video: 0,
+    subjects: 0,
+    projects: 0
+  },
+  {
+    tags:["full-stack-developer", "web-developer"],
+    title: "Starten met Wordpress",
+    code: "WP",
+    img: "../../img/courses/course_wp.svg",
+    text: "Ongeveer 40% van het internet bestaat uit Wordpress applicaties. Veel webshops, blogs en websites in het algemeen zijn gemaakt met Wordpress. Wordpress is een content management systeem (CMS). Dit betekent dat gebruikers zelf content toe kunnen voegen en beheren. Wordpress is gemaakt in PHP en verder gebaseerd op HTML, CSS en Javascript. In deze cursus leer je wat Wordpress kan 'out-of-the-box' en er wordt gekeken naar bestaande thema's waar je een site mee kan vormgeven. Daarnaast leer je een Wordpress-website online te zetten.",
     video: 0,
     subjects: 0,
     projects: 0

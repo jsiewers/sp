@@ -2,7 +2,9 @@ import './views/not-found-view.js';
 import './views/index-view.js';
 import './views/learningpaths/content-developer-view.js';
 import './views/learningpaths/full-stack-developer-view.js';
-import './views/courses/course-php-view.js';
+import './views/learningpaths/frontend-developer-view.js';
+import './views/courses/html/html-index.js';
+import './views/courses/html/html-intro.js';
 import './views/test-view.js';
 
 import { Router } from '@vaadin/router';
@@ -32,13 +34,20 @@ function initRouter() {
             component: 'full-stack-developer-view',
         },
         {
-            path: '/course-php',
-            component: 'course-php-view',
+            path: '/frontend-developer',
+            component: 'frontend-developer-view',
+        },
+        {
+            path: '/course/html',
+            component: 'html-index',
+        },
+        {
+            path: '/course/html/intro',
+            component: 'html-intro',
         },
         {
             path: '(.*)',
             component: 'not-found-view'
         }
     ]);
-
 }

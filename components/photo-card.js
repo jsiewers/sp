@@ -73,7 +73,7 @@ class PhotoCard extends LitElement {
         return html `
           <div id="card">
             <div id="photo" style="background-image: url('../../img/frontpage/${ this.learningpath }.svg');background-color:var(--c-${ this.learningpath });">
-              <a href="/learningpath/${ this.learningpath }">
+              <a href="${ this.learningpath }">
                 <div style="height:150px"></div>
                 <p id="title">
                   <slot name="title">title</slot>

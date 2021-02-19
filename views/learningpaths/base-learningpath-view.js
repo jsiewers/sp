@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import { mainStyles } from '../../styles/main-styles.js';
+import { mainStyles } from '../../../styles/main-styles.js';
 import { courses } from '../../data/courses';
 
 export class BaseLearningpathView extends LitElement {
@@ -36,6 +36,19 @@ export class BaseLearningpathView extends LitElement {
     };
   }
 
+  getCourses(selectedCourses) {
+    return this.selectFilter(selectedCourses).map(course => html`
+    <course-element href="/course/${ course.code.toLowerCase() }" onderwerpen="${course.subjects}" projecten="${course.projects}"
+            src="../../img/courses/${course.img}" video="${course.video}">
+      <span slot="title">
+        ${course.title}
+      </span>
+      <span slot="text">
+        ${course.text}
+      </span>
+    </course-element>
+    `)
+  }
 
   static get styles() {
     return mainStyles

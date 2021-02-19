@@ -48,11 +48,12 @@
     --c6: #d4c4b3;
     --c7: #f7f4f1;
     --c8: #cccbca;
-    --c-webdeveloper: #ccc;
+    --c-frontend-developer: #e63838;
     --c-mobile-developer: #4a8d9b;
     --c-game-developer: #f1ca6b;
     --c-content-developer: #ffd900;
     --c-full-stack-developer:#00b9d4;
+    --c-interaction-designer:#673ab7;
 }
 
 body {
