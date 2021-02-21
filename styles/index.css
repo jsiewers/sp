@@ -29,8 +29,8 @@
     --code-font-family: 'JetBrainsMono', sans-serif;
     --public-sans-wght: 200;
     --type-scale: 1;
-    --media-phone: 800px;
-    --media-tablet: 1090px;
+    --media-phone: 600px;
+    --media-tablet: 770px;
     --media-desktop: 3840px;
 
     /* colors
@@ -75,16 +75,10 @@ body {
     font-size: 1rem;
 }
 
-
-
-/* Page content */
 footer {
     max-width: 1090px;
     width: 80%;
     margin: auto;
-}
-
-footer {
     display:flex;
     justify-content: space-between;
     background-color: var(--c7);

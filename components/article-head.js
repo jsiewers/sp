@@ -17,34 +17,43 @@ class ArticleHead extends LitElement {
           mainStyles,
           css`
             h1 {
+                align-self:end;
                 font-size: calc(1em * var(--type-scale) * 2.8);
                 font-weight: 700;
                 color: var(--c4);
-                margin-block-start: 1rem;
-                margin-block-end: 1rem;
+                margin-block-start: 0rem;
+                margin-block-end: 0rem;
                 line-height: calc(var(--type-scale) * 1.2)
             }
 
-            article {
+            div {
               background-repeat: no-repeat;
-              background-size:cover;
-
+              background-position:center 0px;
+              background-size:3880px;
             }
 
             section {
                 display: grid;
+            }
+
+            section#header {
+                box-sizing:border-box;
                 grid-template-areas:
-                'author date'
                 'header header';
-                grid-column-gap:2rem;
-                grid-row-gap:0px;
-                grid-template-rows: 1fr 1fr;
-                grid-template-columns: 1fr 1fr;
+                height:280px;
+                padding-bottom:1rem;
+            }
+
+            section#info {
+              grid-template-areas:
+              'author date';
+              grid-column-gap:2rem;
+              grid-row-gap:0px;
+              grid-template-columns: 1fr 1fr;
             }
 
             section > #author {
                 grid-area: author;
-                flex-grow:1;
                 font-size: calc(1em * var(--type-scale) * 0.8);
                 font-style:italic;
             }
@@ -52,13 +61,11 @@ class ArticleHead extends LitElement {
             section > #date {
                 grid-area: date;
                 text-align:right;
-                flex-grow:1;
                 font-size: calc(1em * var(--type-scale) * 0.8);
                 font-style:italic;
             }
 
             section > h1 {
-                margin-top:2rem;
                 grid-area: header;
                 color:#fff;
             }`
@@ -67,12 +74,16 @@ class ArticleHead extends LitElement {
 
     render() {
         return html`
-      <article style="background-image:url('${ this.img }');">
-        <section>
+      <article>
+        <div style="background-image:url('${ this.img }');">
+          <section id="header">
+            <h1 id="header"><slot name="header">Article head</slot></h1>
+          </section>
+        </div>
+        <section id="info">
           <p id="author">Auteur: <slot name="author">Author</slot></p>
           <p id="date">Datum: <slot name="date">Date</slot></p>
-          <h1 id="header"><slot name="header">Article head</slot></h1>
-          </section>
+        </section>
       </article>
         `;
     }

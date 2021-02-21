@@ -1,7 +1,7 @@
 export const courses = [
   {
     tags:["full-stack-developer", "content-developer", "web-developer"],
-    code: "HTML",
+    code: "HTML-5",
     title: "Beginnen met Websites bouwen",
     text: "Bijna alle appliciaties werken tegenwoordig op internet of ze maken gebruik van internet-technologie. HTML is de basis van de browser. Alles wat je in een browser ziet is gemaakt met behulp van HTML. In deze cursus leer je stapsgewijs een website te maken met HTML.",
     img: "../../img/courses/course_html5.svg",

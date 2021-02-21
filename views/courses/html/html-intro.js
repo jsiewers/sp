@@ -34,7 +34,7 @@ class HtmlIntro extends HtmlIndex {
             <h3>Opbrengst</h3>
             <p>Wat heb je uiteindelijk geleerd:</p>
             <ul>
-              <li>Je hebt kennis van browsers en je kunt uitleggen hoe browsers omgaan met HTML</li>
+              <li>Je hebt specialistische kennis van browsers en je kunt uitleggen hoe browsers omgaan met HTML</li>
               <li>Je kunt HMTL toepassen om een eenvoudige website te bouwen</li>
               <li>Je kunt media geschikt maken om in een website te gebruiken</li>
               <li>Je kunt verschillende media in een website implementeren</li>
@@ -52,7 +52,7 @@ class HtmlIntro extends HtmlIndex {
               <h3>Wat ga je leren?</h3>
               <p>Een front-end developer moet vooral verstand hebben van alles wat zich in een browser af kan spelen. Het gaat dan ook om de programmeertalen die je in de browser tegenkomt. Denk daarbij aan HTML en CSS, maar ook javascript wordt door een browser ondertsteund.</p>
               <p>Developers in het algemeen, maar speciaal front-end developers moeten geod kunnen samenwerken. Een front-end developer is in veel gevallen niet verantwoordelijk voor de gehele oplossing en moet dus samenwerken met devops-specialisten, opdrachtgevers, full-stack developers of database-specialisten.</p>
-
+              <p  style="margin-bottom:1rem;"></p>
               ${ this.navigation()}
 
             </span>

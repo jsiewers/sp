@@ -1,7 +1,8 @@
 export const routes = [
 {
     path: '/',
-    component: 'index-view'
+    component: 'index-view',
+    action: () => import('/views/index-view.js'),
 },
 {
     path: '/test',
@@ -28,25 +29,28 @@ export const routes = [
     label:'Frontend developer'
 },
 {
-    path: '/courses/html-5',
-    component: 'html-index',
-    action: () => import('/views/courses/html/html-index.js'),
+    path: '/courses',
+    component: 'html-intro',
+    action: () => import('/views/courses/html/html-intro.js'),
     label:'HTML-5 Cursus'
 },
 {
-    path: '/courses/html-5/introductie',
+    path: '/courses/html-5',
     component: 'html-intro',
     action: () => import('/views/courses/html/html-intro.js'),
-    label:'HTML-5 Introductie'
+    label:'01-HTML-5 Introductie'
 },
+
 {
     path: '/courses/html-5/browsers',
     component: 'html-browsers',
     action: () => import('/views/courses/html/html-browsers.js'),
-    label:'HTML-5 en browsers'
+    label:'02-Browsers en HTML'
 },
 {
     path: '(.*)',
     component: 'not-found-view',
+    action: () => import('/views/not-found-view.js')
 }
+
 ];

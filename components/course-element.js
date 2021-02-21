@@ -60,6 +60,7 @@ class CourseElement extends LitElement {
 
         #course {
             display: grid;
+            padding-left:1rem;
             grid-template-columns: 100px 1fr;
             border-radius: 8px;
             overflow: hidden;
@@ -75,6 +76,8 @@ class CourseElement extends LitElement {
             background-repeat: no-repeat;
             background-size:90%;
             background-position: center;
+            background-position-y: 1rem;
+
         }
 
         .line {
@@ -120,6 +123,12 @@ class CourseElement extends LitElement {
         #title > a {
                 color:var(--c4);
                 text-decoration: none;
+        }
+
+        @media only screen and (max-width: 700px) {
+            div#info span {
+              display:block;
+            }
         }
 
     `

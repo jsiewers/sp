@@ -3,15 +3,14 @@ import {
     html,
     css
 } from 'lit-element';
-import 'fa-icons';
 
 class CheckedItem extends LitElement {
      static get styles() {
         return css `
         div#check {
-            display:flex;
-            justify-content: flex-start;
-            margin-bottom:1rem;
+            display:grid;
+            margin-bottom:0.5rem;
+            grid-template-columns: 40px auto;
         }
 
         div#icon {

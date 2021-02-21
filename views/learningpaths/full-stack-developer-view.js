@@ -25,7 +25,7 @@ class FullStackDeveloperView extends BaseLearningpathView {
             </span>
         </article-element>
 
-        ${this.getCourses(["GIT", "HTML", "CSS", "SCRUM", "GITHUB", "JS", "PHP", "MYSQL", "MYSQL_DESIGN", "OOPHP", "PHPFW", "LINUX", "DEVOPS", "ES6", "WPPHP", "WP"])}
+        ${this.getCourses(["GIT", "HTML-5", "CSS", "SCRUM", "GITHUB", "JS", "PHP", "MYSQL", "MYSQL_DESIGN", "OOPHP", "PHPFW", "LINUX", "DEVOPS", "ES6", "WPPHP", "WP"])}
 
         </section>
         `;

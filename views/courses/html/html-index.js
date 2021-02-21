@@ -22,7 +22,18 @@ export class HtmlIndex extends LitElement {
         return [mainStyles,
         css `
           a {
-            color:black;
+            color:var(--c4);
+            text-decoration:none;
+            font-weight:300;
+            vertical-align:top;
+          }
+          fa-icon {
+            padding-block-start:2px;
+          }
+
+          p {
+            margin-block-start:0em;
+            margin-block-end:0em;
           }
         `]
       };
@@ -30,11 +41,11 @@ export class HtmlIndex extends LitElement {
     navigation() {
       return html`
       <card-element href="/course/html">
-        <span slot="title">Courselinks</span>
+        <span slot="title">Links</span>
         <span slot="text">
-        <ul>
           ${this.createUrls(routes)}
-        </ul>
+          <h4>Externe links</h4>
+          <p><fa-icon class="fas fa-angle-right"></fa-icon><a href="https://w3schools.com/html">W3 Schools</a></p>
       </span>
       <span slot="link"> </span>
     </card-element>
@@ -43,13 +54,10 @@ export class HtmlIndex extends LitElement {
 
     createUrls(routes) {
       let urls = []
-      console.log(location.pathname);
-      console.log(this.base_url);
       let filteredRoutes = routes.filter(route => (route.path.slice(0, this.base_url.length) == this.base_url))
       filteredRoutes.forEach((item, i) => {
-        urls.push(html `<li><a href="${item.path}">${item.label}</a></li>`)
+        urls.push(html `<p><fa-icon class="fas fa-angle-right"></fa-icon><a href="${item.path}">${item.label}</a></p>`)
       });
-      console.log(urls);
       return urls;
     }
 
@@ -74,7 +82,7 @@ export class HtmlIndex extends LitElement {
           </span>
           <span slot="col-2">
             <h3>Wat ga je leren?</h3>
-            <p></p>
+            <checked-item>Hiero een checked item!</checked-item>
             ${this.navigation()}
           </span>
         </article-element>

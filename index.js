@@ -1,7 +1,32 @@
-import './views/not-found-view.js';
-import './views/index-view.js';
+//
+import "/components/article-element.js"
+import "/components/article-head.js"
+import "/components/bread-crumbs.js"
+import "/components/card-element.js"
+import "/components/checked-item.js"
+
+//courses
+import "/components/code-element.js"
+import "/components/nav-link.js"
+import "/components/nav-bar.js"
+import "/components/video-element.js"
+
+//frontpage
+import "/components/card-panel.js"
+import "/components/photo-card.js"
+
+//learningpath
+import "/components/course-element.js"
+
+//styles
+import { mainStyles } from '../../../styles/main-styles.js';
+
+
+
+
 import { routes } from './data/routes.js';
 import { Router } from '@vaadin/router';
+import 'fa-icons';
 
 window.addEventListener('load', () => {
     initRouter();
@@ -9,6 +34,5 @@ window.addEventListener('load', () => {
 
 function initRouter() {
     const router = new Router(document.querySelector('main'));
-
     router.setRoutes(routes);
 }
