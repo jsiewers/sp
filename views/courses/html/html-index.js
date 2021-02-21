@@ -1,50 +1,85 @@
 import { LitElement, html, css } from 'lit-element';
 import { mainStyles } from '../../../styles/main-styles.js';
+import { routes } from '../../../data/routes.js';
 
 export class HtmlIndex extends LitElement {
     static get properties() {
       return {
-        doc: { type: String }
+        base_url: { type: String },
+        img: { type: String},
       }
     }
 
     constructor() {
       super();
       //this.location = location
-      let chapter_id = location.pathname.split("/")[2];
-      }
+      //const chapter_id = location.pathname.split("/")[2];
+        this.img = "/img/courses/course_html5_head.svg"
+        this.base_url = "/courses/html-5"
+    }
 
       static get styles() {
-        return mainStyles
+        return [mainStyles,
+        css `
+          a {
+            color:black;
+          }
+        `]
       };
 
+    navigation() {
+      return html`
+      <card-element href="/course/html">
+        <span slot="title">Courselinks</span>
+        <span slot="text">
+        <ul>
+          ${this.createUrls(routes)}
+        </ul>
+      </span>
+      <span slot="link"> </span>
+    </card-element>
+    `
+    }
+
+    createUrls(routes) {
+      let urls = []
+      console.log(location.pathname);
+      console.log(this.base_url);
+      let filteredRoutes = routes.filter(route => (route.path.slice(0, this.base_url.length) == this.base_url))
+      filteredRoutes.forEach((item, i) => {
+        urls.push(html `<li><a href="${item.path}">${item.label}</a></li>`)
+      });
+      console.log(urls);
+      return urls;
+    }
 
     render() {
-        return html`
-        <article-head img="/img/courses/course_html5_head.svg">
-          <span slot="author">Jan Jaap Siewers</span>
-          <span slot="date">15-02-2021</span>
-          <span slot="header">HTML5</span>
-        </article-head>
-        <section>
-          <article-element>
-            <span slot="header">Beginnen met Websites bouwen</span>
-            <span slot="col-1">
-            <h3>Doelgroep</h3>
-            <h3>Leerdoelen</h3>
-            <h3>Activiteiten</h3>
-            <h3>Opbrengst</h3>
-            <h3>Voorkennis</h3>
-              <p>Een front-end developer houdt zicht vooral bezig met de 'look en feel' van een applicatie. Hij zorgt ervoor dat een applicatie gebruiksvriendelijk is en hij zorgt er voor dat een app of website er goed uitziet. Het gaat niet alleen om het uiterlijk het gaat ook om bedieningsgemak. Front-end developers zijn min of meer de spil als het gaat om de connectie tussen data, functionaliteit en gebruikersinterface.</p>
-            </span>
-            <span slot="col-2">
-              <h3>Wat ga je leren?</h3>
-              <p>Een front-end developer moet vooral verstand hebben van alles wat zich in een browser af kan spelen. Het gaat dan ook om de programmeertalen die je in de browser tegenkomt. Denk daarbij aan HTML en CSS, maar ook javascript wordt door een browser ondertsteund.</p>
-              <p>Developers in het algemeen, maar speciaal front-end developers moeten geod kunnen samenwerken. Een front-end developer is in veel gevallen niet verantwoordelijk voor de gehele oplossing en moet dus samenwerken met devops-specialisten, opdrachtgevers, full-stack developers of database-specialisten.</p>
-            </span>
-          </article-element>
-        </section>
-      `
+      return html`
+      <article-head img="${ this.img }">
+        <span slot="author">Jan Jaap Siewers</span>
+        <span slot="date">15-02-2021</span>
+        <span slot="header">HTML5</span>
+      </article-head>
+      <section>
+      <bread-crumbs loc="${location}"></bread-crumbs>
+        <article-element>
+          <span slot="header">Beginnen met Websites bouwen</span>
+          <span slot="col-1">
+          <h3>Doelgroep</h3>
+          <h3>Leerdoelen</h3>
+          <h3>Activiteiten</h3>
+          <h3>Opbrengst</h3>
+          <h3>Voorkennis</h3>
+            <p></p>
+          </span>
+          <span slot="col-2">
+            <h3>Wat ga je leren?</h3>
+            <p></p>
+            ${this.navigation()}
+          </span>
+        </article-element>
+      </section>
+    `
     }
 }
 
