@@ -1,5 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 import { courses } from '../../data/courses';
+import { mainStyles } from '../../../styles/main-styles.js';
 
 export class BaseLearningpathView extends LitElement {
   static get properties() {
