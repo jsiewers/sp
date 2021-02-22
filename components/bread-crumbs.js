@@ -38,12 +38,12 @@ class BreadCrumbs extends LitElement {
       let counter = 0;
       let p = "";
       let parts = [html `<div>`];
-      parts.push( html `<a href="/">home</a> <fa-icon class="fas fa-angle-right"> ` );
+      parts.push( html `<fa-icon class="fas fa-angle-right"></fa-icon><a href="/">home</a>` );
       this.loc.split("/").forEach(path => {
           counter++;
           if(counter > 3) {
             p += (path + "/");
-            parts.push(html `<a href="/${p.slice(0,-1)}">${path}</a><fa-icon class="fas fa-angle-right">`);
+            parts.push(html `<fa-icon class="fas fa-angle-right"></fa-icon><a href="/${p.slice(0,-1)}">${path}</a>`);
           }
       });
       parts.push(html `</div>`)

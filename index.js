@@ -19,9 +19,6 @@ import "/components/photo-card.js"
 import "/components/course-element.js"
 
 //styles
-import { mainStyles } from '../../../styles/main-styles.js';
-
-
 
 
 import { routes } from './data/routes.js';

@@ -18,6 +18,7 @@ class CardElement extends LitElement {
                 box-shadow: 3px 3px 5px 1px #cccbca;
                 background-color:var(--c7);
                 color:var(--c4);
+                margin-bottom:1rem;
             }
 
             #title {

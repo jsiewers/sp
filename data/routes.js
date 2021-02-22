@@ -30,9 +30,9 @@ export const routes = [
 },
 {
     path: '/courses',
-    component: 'html-intro',
-    action: () => import('/views/courses/html/html-intro.js'),
-    label:'HTML-5 Cursus'
+    component: 'course-index',
+    action: () => import('/views/courses/course-index.js'),
+    label:'Alle cursussen'
 },
 {
     path: '/courses/html-5',
@@ -40,12 +40,29 @@ export const routes = [
     action: () => import('/views/courses/html/html-intro.js'),
     label:'01-HTML-5 Introductie'
 },
-
 {
     path: '/courses/html-5/browsers',
     component: 'html-browsers',
     action: () => import('/views/courses/html/html-browsers.js'),
     label:'02-Browsers en HTML'
+},
+{
+    path: '/courses/git',
+    component: 'git-intro',
+    action: () => import('/views/courses/git/git-intro.js'),
+    label:'Starten met Git'
+},
+{
+    path: '/courses/git/git-installeren',
+    component: 'git-installeren',
+    action: () => import('/views/courses/git/git-installeren.js'),
+    label:'Opdracht 1: Git installeren'
+},
+{
+    path: '/courses/git/git-commit',
+    component: 'git-commit',
+    action: () => import('/views/courses/git/git-commit.js'),
+    label:'Opdracht 2: Een Git repository beheren'
 },
 {
     path: '(.*)',

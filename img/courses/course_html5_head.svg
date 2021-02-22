@@ -4,22 +4,6 @@
 	 x="0px" y="0px" viewBox="0 0 2600.3 199" overflow="visible" xml:space="preserve">
 <rect x="0.7" y="-0.2" fill="#00B9D4" width="2600" height="199"/>
 <path fill="#455A64" d="M371.4-249.7h0.8v0.6h-0.8V-249.7z M371.4-247.3h0.8v0.6l-0.4,0.7h-0.4l0.3-0.7h-0.3V-247.3L371.4-247.3z"/>
-<rect x="1223.1" y="-286.4" fill="#663000" width="24.8" height="24.8"/>
-<text transform="matrix(1 0 0 1 1263.8282 -269.3236)" font-family="'HelveticaNeue'" font-size="15.6641px">#ccc</text>
-<rect x="1223.1" y="-249.9" fill="#4A8D9B" width="24.8" height="24.8"/>
-<text transform="matrix(1 0 0 1 1263.8282 -232.7738)" font-family="'HelveticaNeue'" font-size="15.6641px">#4a8d9b</text>
-<rect x="1223.1" y="-213.3" fill="#00B9D4" width="24.8" height="24.8"/>
-<text transform="matrix(1 0 0 1 1263.8282 -196.225)" font-family="'HelveticaNeue'" font-size="15.6641px">#00b9d4</text>
-<rect x="1223.1" y="-176.8" fill="#F1CA6B" width="24.8" height="24.8"/>
-<text transform="matrix(1 0 0 1 1263.8282 -159.6752)" font-family="'HelveticaNeue'" font-size="15.6641px">#f1ca6b</text>
-<rect x="1223.1" y="-140.2" fill="#FFD900" width="24.8" height="24.8"/>
-<text transform="matrix(1 0 0 1 1263.8282 -123.1254)" font-family="'HelveticaNeue'" font-size="15.6641px">#</text>
-<text transform="matrix(1 0 0 1 1272.5372 -123.1254)" font-family="'HelveticaNeue'" font-size="15.6641px">f</text>
-<text transform="matrix(1 0 0 1 1276.8917 -123.1254)" font-family="'HelveticaNeue'" font-size="15.6641px">f</text>
-<text transform="matrix(1 0 0 1 1281.5284 -123.1254)" font-family="'HelveticaNeue'" font-size="15.6641px">d</text>
-<text transform="matrix(1 0 0 1 1290.8175 -123.1254)" font-family="'HelveticaNeue'" font-size="15.6641px">9</text>
-<text transform="matrix(1 0 0 1 1299.5265 -123.1254)" font-family="'HelveticaNeue'" font-size="15.6641px">0</text>
-<text transform="matrix(1 0 0 1 1308.2355 -123.1254)" font-family="'HelveticaNeue'" font-size="15.6641px">0</text>
 <path fill-rule="evenodd" fill="#1A1A1A" d="M1331.8,189.4h101.6c0.6,0,1.2-0.5,1-1l-5-12.3c-0.2-0.5-2.3-1-2.9-1h-87.9
 	c-0.6,0-2.7,0.5-2.9,1l-5,12.3C1330.6,188.9,1331.2,189.4,1331.8,189.4L1331.8,189.4z"/>
 <path fill-rule="evenodd" fill="#333333" d="M1374.3,146h16.4v31.7c-5.2,2.1-10.5,2.5-16.4,0V146z"/>

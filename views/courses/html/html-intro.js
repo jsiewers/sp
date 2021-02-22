@@ -1,12 +1,19 @@
 import { html } from 'lit-element';
-import { HtmlIndex } from './html-index.js'
+import { CourseIndex } from '../course-index.js'
 
-class HtmlIntro extends HtmlIndex {
+
+class HtmlIntro extends CourseIndex {
+  constructor() {
+    super();
+    this.img = "../../img/courses/course_html5_head.svg"
+    this.base_url = "/courses/html-5"
+  }
+
     render() {
         return html`
-        <article-head img="${ this.img }">
+        <article-head img="${this.img}">
           <span slot="author">Jan Jaap Siewers</span>
-          <span slot="date">20-02-2021</span>
+          <span slot="date">22-02-2021</span>
           <span slot="header">HTML5</span>
         </article-head>
         <section>
@@ -54,7 +61,13 @@ class HtmlIntro extends HtmlIndex {
               <p>Developers in het algemeen, maar speciaal front-end developers moeten geod kunnen samenwerken. Een front-end developer is in veel gevallen niet verantwoordelijk voor de gehele oplossing en moet dus samenwerken met devops-specialisten, opdrachtgevers, full-stack developers of database-specialisten.</p>
               <p  style="margin-bottom:1rem;"></p>
               ${ this.navigation()}
-
+              <card-element>
+                <span slot="title">Externe Links</span>
+                <span slot="text">
+                  <p><fa-icon class="fas fa-angle-right"></fa-icon><a href="https:www.w3schools.com/html">W3 Schools - HTML-5</a></p>
+                </span>
+                <span slot="link"></span>
+              </card-element>
             </span>
           </article-element>
         </section>
