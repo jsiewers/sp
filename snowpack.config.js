@@ -29,7 +29,6 @@ module.exports = {
     baseUrl:"/"
   },
   optimize: {
-    bundle:true,
     minify:true,
     target:'es2018',
   }

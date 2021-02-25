@@ -11,12 +11,10 @@ export const mainStyles = css`
       color: var(--c4);
       line-height: 1rem;
   }
-
   h2 {
       font-size: calc(1em * var(--type-scale) * 2);
       line-height: calc(1em * var(--type-scale) * 1.2);
   }
-
   h3 {
       margin-block-start: 3rem;
       font-size: calc(1em * var(--type-scale) * 1.4);

@@ -2,3 +2,4 @@
 /build
 package-lock.json
 /.idea
+/public_html
