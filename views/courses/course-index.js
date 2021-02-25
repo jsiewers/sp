@@ -1,7 +1,7 @@
 import {BaseLearningpathView} from '../learningpaths/base-learningpath-view.js';
 import { html, css } from 'lit-element';
-import { mainStyles } from '../../../styles/main-styles.js';
-import { routes } from '../../../data/routes.js';
+import { mainStyles } from '../../styles/main-styles.js';
+import { routes } from '../../data/routes.js';
 
 export class CourseIndex extends BaseLearningpathView {
     static get properties() {
@@ -20,7 +20,7 @@ export class CourseIndex extends BaseLearningpathView {
     }
 
       static get styles() {
-        return [mainStyles,
+        return [ mainStyles,
         css `
           a {
             color:var(--c4);
@@ -39,12 +39,15 @@ export class CourseIndex extends BaseLearningpathView {
         `]
       };
 
+    externalLinks() {}
+
     navigation() {
       return html`
-      <card-element style="margin-bottom:1rem;">
+      <card-element>
         <span slot="title">Links</span>
         <span slot="text">
           ${this.createUrls(routes)}
+          ${this.externalLinks()}
       </span>
       <span slot="link"> </span>
     </card-element>
@@ -55,8 +58,7 @@ export class CourseIndex extends BaseLearningpathView {
       let urls = []
       let filteredRoutes = routes.filter(route => (route.path.slice(0, this.base_url.length) == this.base_url))
       filteredRoutes.forEach((item, i) => {
-        console.log(item);
-        urls.push(html `<p><fa-icon class="fas fa-angle-right"></fa-icon><a href="${item.path}">${item.label}</a></p>`)
+        urls.push(html `<link-item href="${item.path}"><span slot="link">${item.label}</span></link-item>`)
       });
       return urls;
     }

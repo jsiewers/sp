@@ -10,13 +10,11 @@ class CheckedItem extends LitElement {
         div#check {
             display:grid;
             margin-bottom:0.5rem;
-            grid-template-columns: 40px auto;
+            grid-template-columns: 30px auto;
         }
 
         div#icon {
-            margin-right:1rem;
-            color:green;
-            width:30px;
+            color:var(--c3);
         }
     `
     };
@@ -24,7 +22,7 @@ class CheckedItem extends LitElement {
     render() {
         return html `
             <div id="check">
-                <div id="icon"><fa-icon class="fas fa-check"></fa-icon> </div>
+                <div id="icon"><fa-icon size="0.9rem" class="fas fa-check"></fa-icon> </div>
                 <div id="text"><slot></slot></div>
             </div>
         `;

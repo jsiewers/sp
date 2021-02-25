@@ -10,29 +10,32 @@ class GitCommit extends CourseIndex {
     this.base_url = "/courses/git"
   }
 
-    render() {
-        return html`
-        <article-head img="${this.img}">
-          <span slot="author">Jan Jaap Siewers</span>
-          <span slot="date">22-02-2021</span>
-          <span slot="header">Versiebeheer met Git</span>
-        </article-head>
-        <section>
-          <bread-crumbs loc="${location}"></bread-crumbs>
-          <article-element>
-            <span slot="header">Opdracht 2: Een Git repository beheren</span>
-            <span slot="col-1">
-            <h3>Voordat je kunt beginnen</h3>
-            <p>Voor deze opdracht heb je het eindresultaat van opdracht 1 nodig. Een projectmap gevuld met een aantal tekst-bestanden.<p>
-            <p>Om je project op te slaan in het versiebeheersysteem Git, heb je een repository nodig. Een repository is een soort bibliotheek waar alle veranderingen die je aanbrengt aan je project worden opgeslagen. Door gebruik te maken van Git commando's kun je een repository beheren.</p>
-            <p>Hieronder vind je een aantal git-commando's die je moet kennen</p>
+  externalLinks() {
+        return [ html `
+          <h4>Externe links</h4>
+          <link-item href="https://rogerdudler.github.io/git-guide/index.nl.html"><span slot="link">git- een simpele uitleg</span></link-item>
+      ` ]
+  }
 
 
-
-
-
-            <h3>Git Commando's</h3>
-            <code-element>
+  render() {
+    return html`
+      <article-head img="${this.img}">
+        <span slot="author">Jan Jaap Siewers</span>
+        <span slot="date">22-02-2021</span>
+        <span slot="header">Versiebeheer met Git</span>
+      </article-head>
+      <section>
+        <bread-crumbs loc="${location}"></bread-crumbs>
+        <article-element>
+          <span slot="header">Opdracht 2: Een Git repository beheren</span>
+          <span slot="col-1">
+          <h3>Voordat je kunt beginnen</h3>
+          <p>Voor deze opdracht heb je het eindresultaat van opdracht 1 nodig. Een projectmap gevuld met een aantal tekst-bestanden.<p>
+          <p>Om je project op te slaan in het versiebeheersysteem Git, heb je een repository nodig. Een repository is een soort bibliotheek waar alle veranderingen die je aanbrengt aan je project worden opgeslagen. Door gebruik te maken van Git commando's kun je een repository beheren.</p>
+          <p>Hieronder vind je een aantal git-commando's die je moet kennen:</p>
+          <br />
+          <code-element>
 git initial
 // Maak een nieuwe lege repository aan
 // in de huidige map
@@ -49,7 +52,7 @@ git remote -v
 // Bekijk een lijst van repositories waarmee deze
 // repository is gelinkt
 git remote
-  add origin gebruiker@host:/path/to/repository
+add origin gebruiker@host:/path/to/repository
 // Voeg een link naar lege repository op een server
 // (bijv. github) toe aan je repository.
 // Noem de link 'origin'
@@ -61,34 +64,26 @@ git push origin master
 git pull origin master
 // Haal een nieuwe versie op van de server en
 // synchroniseer met je lokale repository
-            </code-element>
-            </span>
-            <span slot="col-2">
-            ${ this.navigation()}
-            <card-element>
-              <span slot="title">Externe Links</span>
-              <span slot="text">
-                <p><fa-icon class="fas fa-angle-right"></fa-icon><a href="https://rogerdudler.github.io/git-guide/index.nl.html">git- een simpele uitleg</a></p>
-              </span>
-              <span slot="link"></span>
-            </card-element>
-
-            <h3>De opdracht</h3>
-            <p>Maak een lege repository aan in je projectmap "recepten".</p>
-            <p>Voeg de bestaande bestanden toe aan de stage van je repository</p>
-            <p>Commit je bestanden naar de repository, met in de commentaarregel "toevoegen bestaande recepten"</p>
-            <p>Maak een vierde recept en voeg het toe aan je repository.</p>
-            <p>Maak een lege remote repository aan op github.com. (dus geen readme toevoegen)</p>
-            <p>Voeg aan je lokale repository een link toe naar de remote repository met de naam 'origin'</p>
-            <p>Synchroniseer je bestanden met de repository op Github.</p>
-            <h3>Resultaten van deze opdracht</h3>
-            <checked-item>Een lokale repository met 4 recepten</checked-item>
-            <checked-item>Een gesynchroniseerde remote repository op Github met 4 recepten</checked-item>
-            </span>
-          </article-element>
-        </section>
-      `
-    }
+          </code-element>
+          </span>
+          <span slot="col-2">
+          ${ this.navigation()}
+          <h3>De opdracht</h3>
+          <list-item>Maak een lege repository aan in je projectmap "recepten".</list-item>
+          <list-item>Voeg de bestaande bestanden toe aan de stage van je repository</list-item>
+          <list-item>Commit je bestanden naar de repository, met in de commentaarregel "toevoegen bestaande recepten"</list-item>
+          <list-item>Maak een vierde recept en voeg het toe aan je repository.</list-item>
+          <list-item>Maak een lege remote repository aan op github.com. (dus geen readme toevoegen)</list-item>
+          <list-item>Voeg aan je lokale repository een link toe naar de remote repository met de naam 'origin'</list-item>
+          <list-item>Synchroniseer je bestanden met de repository op Github.</list-item>
+          <h3>Resultaten van deze opdracht</h3>
+          <checked-item>Een lokale repository met 4 recepten</checked-item>
+          <checked-item>Een gesynchroniseerde remote repository op Github met 4 recepten</checked-item>
+          </span>
+        </article-element>
+      </section>
+    `
+  }
 }
 
 customElements.define('git-commit', GitCommit);

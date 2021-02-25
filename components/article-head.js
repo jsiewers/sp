@@ -19,8 +19,6 @@ class ArticleHead extends LitElement {
             h1 {
                 align-self:end;
                 font-size: calc(1em * var(--type-scale) * 2.8);
-                font-weight: 700;
-                color: var(--c4);
                 margin-block-start: 0rem;
                 margin-block-end: 0rem;
                 line-height: calc(var(--type-scale) * 1.2)

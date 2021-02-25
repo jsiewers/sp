@@ -4,6 +4,8 @@ import "/components/article-head.js"
 import "/components/bread-crumbs.js"
 import "/components/card-element.js"
 import "/components/checked-item.js"
+import "/components/list-item.js"
+import "/components/link-item.js"
 
 //courses
 import "/components/code-element.js"

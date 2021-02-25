@@ -3,8 +3,6 @@ class ArticleElement extends LitElement {
     static get styles() {
         return css`
 
-
-
        article {
             display: grid;
             grid-template-areas:
@@ -16,6 +14,7 @@ class ArticleElement extends LitElement {
 
         article > #header {
             grid-area: header;
+            color:var(--c4);
         }
 
         article > #col-1 {
@@ -26,18 +25,14 @@ class ArticleElement extends LitElement {
             grid-area:col-2;
         }
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 800px) {
             article {
               grid-template-areas:
               'header header'
               'col-1 col-1'
               'col-2 col-2'
             }
-
         }
-
-
-
     `};
 
     render() {

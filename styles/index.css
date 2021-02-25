@@ -68,8 +68,6 @@ body {
     line-height: calc(var(--type-scale) * 1.5);
 }
 
-
-
 .code {
     font-family: 'JetBrainsMono';
     font-size: 1rem;

@@ -24,26 +24,24 @@ class GitInstalleren extends CourseIndex {
             <span slot="col-1">
             <h3>Wat heb je nodig</h3>
             <p>Nu ga je Git installeren. Je kunt git vinden op <a href="https://git-scm.com">git-scm.com</a></p>
-            <ul>
-              <li>Installeer Git Bash en eventueel Git GUI. In de cursus wordt alleen Git Bash gebruikt</li>
-              <li>Kies een text-editor. Kies je favoriet of Nano.</li>
-              <li>Laat de standaard branch-name "master". Dat is de default instelling (Default)</li>
-              <li>Als je nog meer Git tools wil gebruiken, kies dan de 2e (recommended) optie. (Default)</li>
-              <li>Gebruik de OpenSSL library (Default)</li>
-              <li>Checkout Windows-style, commit Unix-style line endings. Zo voor kom je problemen als je samenwerkt met Unix of Mac gebruikers (Default)</li>
-              <li>Gebruik MinTTY (Git Bash) (Default)</li>
-              <li>Kies de default optie voor het gedrag van 'git pull' (Default)</li>
-              <li>Gebruik de Git Credential Manager Core (Default)</li>
-              <li>Enable file system caching (Default)</li>
-              <li>Disable experimental support (Default)</li>
-            </ul>
+            <p>Installeer Git Bash en eventueel Git GUI. In de cursus wordt alleen Git Bash gebruikt.</p>
+            <list-item>Kies een text-editor. Kies je favoriete editor of kies Nano.</list-item>
+            <list-item>Laat de standaard branch-name "master"(default).</list-item>
+            <list-item>Als je nog meer Git tools wil gebruiken, kies dan de 2e (recommended) optie. (default)</list-item>
+            <list-item>Gebruik de OpenSSL library (default)</list-item>
+            <list-item>Checkout Windows-style, commit Unix-style line endings. Zo voor kom je problemen als je samenwerkt met Unix of Mac gebruikers (default)</list-item>
+            <list-item>Gebruik MinTTY (Git Bash) (default)</list-item>
+            <list-item>Kies de default optie voor het gedrag van 'git pull' (default)</list-item>
+            <list-item>Gebruik de Git Credential Manager Core (default)</list-item>
+            <list-item>Enable file system caching (default)</list-item>
+            <list-item>Disable experimental support (default)</list-item>
             <h3>Git Bash</h3>
             Git Bash is vergelijkbaar met "command" in Windows. Maar het is net even anders. Git Bash is een beperkte Linux shell. Je maakt dus gebruik van Linux commando's in plaats van Windows commando's. Hieronder vind je de belangrijkste commando's die je moet weten:
             <code-element>
 pwd
-// toon pad van huidige working directory
+// toon pad van huidige directory
 ls
-// toon inhoud van huidige working directory
+// toon inhoud van huidige directory
 ls dir
 // toon inhoud van directory dir
 ls -l [dir]
@@ -59,8 +57,8 @@ cd dir
 cp file dir
 //kopieer file naar directory dir
 cp -r dir1 dir2
-// kopieer (recursief, dus inclusief alle bestanden)
-//directory dir1 naar dir2
+// kopieer (inclusief alle bestanden)
+// directory dir1 naar dir2
 mv file1 file2
 // verander naam van file1 in file2
 mv file dir
@@ -71,7 +69,6 @@ rmdir dir
 // verwijder de lege directory dir
 rm -R dir
 // verwijder (recursief) directory dir
-
             </code-element>
             </span>
             <span slot="col-2">

@@ -25,5 +25,12 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
+    out: "public_html",
+    baseUrl:"/"
   },
+  optimize: {
+    bundle:true,
+    minify:true,
+    target:'es2018',
+  }
 };
