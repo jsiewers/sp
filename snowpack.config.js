@@ -25,11 +25,13 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
-    out: "public_html",
-    baseUrl:"/"
+    //out: "public_html",
+    //baseUrl:"/"
   },
   optimize: {
-    minify:true,
-    target:'es2018',
+
+  },
+  alias: {
+
   }
 };

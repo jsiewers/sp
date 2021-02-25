@@ -38,6 +38,7 @@ class GitInstalleren extends CourseIndex {
             <h3>Git Bash</h3>
             Git Bash is vergelijkbaar met "command" in Windows. Maar het is net even anders. Git Bash is een beperkte Linux shell. Je maakt dus gebruik van Linux commando's in plaats van Windows commando's. Hieronder vind je de belangrijkste commando's die je moet weten:
             <code-element>
+
 pwd
 // toon pad van huidige directory
 ls
@@ -69,8 +70,8 @@ rmdir dir
 // verwijder de lege directory dir
 rm -R dir
 // verwijder (recursief) directory dir
-            </code-element>
-            </span>
+</code-element>
+</span>
             <span slot="col-2">
             ${ this.navigation()}
             <h3>De opdracht</h3>

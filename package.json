@@ -15,8 +15,6 @@
   },
   "dependencies": {
     "@vaadin/router": "^1.7.3",
-    "fa-icons": "^0.2.0",
-    "lit-element": "^2.4.0",
-    "prismjs": "^1.23.0"
+    "lit-element": "^2.4.0"
   }
 }

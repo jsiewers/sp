@@ -21,11 +21,11 @@ import "/components/photo-card.js"
 import "/components/course-element.js"
 
 //styles
+import "/components/fa-icon.js"
 
 
 import { routes } from './data/routes.js';
 import { Router } from '@vaadin/router';
-import 'fa-icons';
 
 window.addEventListener('load', () => {
     initRouter();

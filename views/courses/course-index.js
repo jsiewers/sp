@@ -1,6 +1,6 @@
 import {BaseLearningpathView} from '../learningpaths/base-learningpath-view.js';
 import { html, css } from 'lit-element';
-import { mainStyles } from '../styles/main-styles.js';
+import { mainStyles } from '../../styles/main-styles.js';
 import { routes } from '../../data/routes.js';
 
 export class CourseIndex extends BaseLearningpathView {

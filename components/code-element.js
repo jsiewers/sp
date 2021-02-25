@@ -1,11 +1,10 @@
 import { LitElement, html, css } from 'lit-element';
-import 'prismjs/prism';
-
+import '/utility/prism/prism.js';
 
 class CodeElement extends LitElement {
     constructor() {
         super();
-        this.language = 'clike';
+        this.language = 'javascript';
         this.theme = '/utility/prism/prism.css';
         this.lineNumbers = false;
     }
@@ -23,7 +22,7 @@ class CodeElement extends LitElement {
 
 
     async firstUpdated() {
-        await this.__loadLanguage();
+        //await this.__loadLanguage();
         const nodes = this.shadowRoot.querySelector('#code').assignedNodes();
         let codeCombined = '';
         for (let index = 0, len = nodes.length; index < len; ++index) {
@@ -40,7 +39,7 @@ class CodeElement extends LitElement {
     }
 
     async __loadLanguage() {
-        await import(`/node_modules/prismjs/components/prism-${this.language}.min.js`);
+        //await import(`/utility/prismjs/components/prism-${this.language}.min.js`);
     }
 
     static get styles() {
@@ -63,4 +62,3 @@ class CodeElement extends LitElement {
 }
 
 customElements.define('code-element', CodeElement);
-

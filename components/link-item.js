@@ -15,7 +15,7 @@ class LinkItem extends LitElement {
         div#list {
             display:grid;
             margin-bottom:0.5rem;
-            grid-gap:1rem;
+            grid-gap:0.5rem;
             grid-template-columns: 0.8rem auto;
         }
 
@@ -37,7 +37,7 @@ class LinkItem extends LitElement {
         return html `
             <div id="list">
                 <div id="icon">
-                  <fa-icon size="0.8rem" style="padding:0px;height:23px;vertical-align:top;" class="fas fa-angle-right"></fa-icon>
+                  <fa-icon size="1rem" style="padding:0px;height:23px;vertical-align:top;" class="fas fa-angle-right"></fa-icon>
                 </div>
                 <div>
                   <a href="${ this.href }"><slot name="link"></slot></a>

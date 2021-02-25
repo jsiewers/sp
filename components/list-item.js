@@ -60,6 +60,7 @@ class ListItem extends LitElement {
           color:var(--c3);
           flex: none;
           margin-right:1rem;
+          margin-top:-3px;
 
         }
 
