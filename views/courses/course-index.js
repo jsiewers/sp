@@ -2,21 +2,15 @@ import {BaseLearningpathView} from '../learningpaths/base-learningpath-view.js';
 import { html, css } from 'lit-element';
 import { mainStyles } from '../../styles/main-styles.js';
 import { routes } from '../../data/routes.js';
+import { externalRoutes } from '../../data/external-routes.js';
 
 export class CourseIndex extends BaseLearningpathView {
     static get properties() {
       return {
         base_url: { type: String },
         img: { type: String},
+        extroutes: { type: Array }
       }
-    }
-
-    constructor() {
-      super();
-      //this.location = location
-      //const chapter_id = location.pathname.split("/")[2];
-        this.img = "/img/courses/course_all_head.svg"
-        this.base_url = "/courses"
     }
 
       static get styles() {
@@ -39,15 +33,38 @@ export class CourseIndex extends BaseLearningpathView {
         `]
       };
 
-    externalLinks() {}
+      constructor() {
+        super();
+          this.img = "/img/courses/course_all_head.svg"
+          this.base_url = "/courses"
+          this.extroutes = externalRoutes
+          this.linkFilter = (query) => {
+            let selectedlinks = this.extroutes.filter(extroute => {
+              let order = query.indexOf(extroute.course)
+              if (order !== -1) {
+                  extroute.order = order;
+                  return true;
+              }
+            })
+          return selectedlinks.sort((a,b) => a.order - b.order);
+        };
+      }
 
-    navigation() {
+    getExternalLinks(course_id) {
+      return [ html `<h4>Externe links</h4>`,
+        this.linkFilter(course_id).map(course => html`
+        <link-item href="${ course.path }"><span slot="link">${ course.label }</span></link-item>
+        ` )];
+    }
+
+    navigation(course_id) {
+      console.log(course_id);
       return html`
       <card-element>
         <span slot="title">Links</span>
         <span slot="text">
           ${this.createUrls(routes)}
-          ${this.externalLinks()}
+          ${this.getExternalLinks(course_id)}
       </span>
       <span slot="link"> </span>
     </card-element>

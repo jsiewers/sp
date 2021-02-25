@@ -41,7 +41,7 @@ class GitIntro extends CourseIndex {
             <p>In eerste instantie moet je begrijpen hoe Git werkt. Wat doet het voor je en wat kan het je opleveren. Daarnaast ga je leren hoe git past in je ontwikkelomgeving en welke commando's je kunt gebruiken om Git aan te sturen.</p>
           </span>
             <span slot="col-2">
-            ${ this.navigation()}
+            ${ this.navigation("GIT")}
             <h3>Activiteiten</h3>
               <list-item>Je gaat Git installeren</list-item>
               <list-item>Je gaat onderzoeken hoe git werkt onder de motorkap.</list-item>

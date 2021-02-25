@@ -8,10 +8,15 @@ class VideoElement extends LitElement {
         };
     }
     static get styles() {
-        return css` 
+        return css`
     <style>
-     .videoWrapper {
+    :host {
+      position:relative;
+    }
+
+    .videoWrapper {
         position: relative;
+        margin-top:2rem;
         padding-bottom: 56.25%; /* 16:9 */
         height: 0;
     }
@@ -21,9 +26,9 @@ class VideoElement extends LitElement {
         left: 0;
         width: 100%;
         height: 100%;
-    }                                           
+    }
     </style>
-          
+
         `;
     }
 
@@ -32,12 +37,11 @@ class VideoElement extends LitElement {
 
     render() {
         return html`
-            <p>Videoootje</p>
             <div class="videoWrapper">
                 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen frameborder="0" height="auto"
                         src="https://www.youtube.com/embed/${ this.video }"
-                        width="100%"></iframe>
+                        ></iframe>
             </div>
         `;
     }

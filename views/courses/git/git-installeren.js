@@ -6,6 +6,7 @@ import { CourseIndex } from '../course-index.js'
 class GitInstalleren extends CourseIndex {
   constructor() {
     super();
+    this.course_git = "GIT"
     this.img = "../../img/courses/course_git_head.svg"
     this.base_url = "/courses/git"
   }
@@ -24,7 +25,7 @@ class GitInstalleren extends CourseIndex {
             <span slot="col-1">
             <h3>Wat heb je nodig</h3>
             <p>Nu ga je Git installeren. Je kunt git vinden op <a href="https://git-scm.com">git-scm.com</a></p>
-            <p>Installeer Git Bash en eventueel Git GUI. In de cursus wordt alleen Git Bash gebruikt.</p>
+            <p>Installeer Git Bash en eventueel Git GUI. In de cursus wordt alleen Git Bash gebruikt.Tijdens de installatie moet je veel opties kiezen. In de meeste gevallen is de default optie prima. Hieronder zie je welke opties er zijn:</p>
             <list-item>Kies een text-editor. Kies je favoriete editor of kies Nano.</list-item>
             <list-item>Laat de standaard branch-name "master"(default).</list-item>
             <list-item>Als je nog meer Git tools wil gebruiken, kies dan de 2e (recommended) optie. (default)</list-item>
@@ -73,10 +74,14 @@ rm -R dir
 </code-element>
 </span>
             <span slot="col-2">
-            ${ this.navigation()}
+            ${ this.navigation("GIT")}
             <h3>De opdracht</h3>
             <p>Installeer Git met Git Bash. Open Git Bash en maak een map aan waar je git-projecten gaat opslaan. In filmpjes wordt gebruik gemaakt van een map git in de user-directory, maar je kunt een willekeurige directory kiezen.</p>
-            <p>Maak met behulp van Git Bash en de Linux commando's een map aan in je git-projecten map. Noem de directory "Recepten". Maak in de map "Recepten" 3 text-bestanden aan met een text-editor zoals Nano, Notepad++ of een IDE zoals Atom, Visual Studio Code of IntelliJ. LET OP: Gebruik hiervoor geen Micorsoft Word!!!</p>
+            <p>Maak met behulp van Git Bash en de Linux commando's een map aan in je git-projecten map. Noem de directory "Recepten". Maak in de map "Recepten" 3 text-bestanden aan met een text-editor zoals Nano, Notepad++ of een IDE zoals Atom, Visual Studio Code of IntelliJ.
+            Scrijf in de text-bestanden de ingrediënten voor je favoriete 3 recepten.<br />
+            LET OP: Gebruik geen Micorsoft Word!!!</p>
+
+            <video-element video="8WGj9q-hAFc"></video-element>
             <h3>Resultaten van deze opdracht</h3>
             <checked-item>Een goed werkende installatie van Git</checked-item>
             <checked-item>Een directory waarin je projecten gaat beheren met Git</checked-item>

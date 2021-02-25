@@ -86,9 +86,9 @@ export const courses = [
     title: "Beginnen met versiebeheer in Git",
     text: "Deze cursus is voor beginnende programmeurs die niet graag hun werk kwijt raken of per ongeluk code weggooien. Je kunt het geloven of niet, maar het gebeurt bijna bij iedere startende programmeur. Git is de oplossing en het is niet meer weg te denken bij vrijwel ieder software project.",
     img: "../../img/courses/course_git.svg",
-    video: 0,
-    subjects: 0,
-    projects: 0
+    video: 1,
+    subjects: 3,
+    projects: 3
   },
   {
     tags:["full-stack-developer", "web-developer"],

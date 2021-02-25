@@ -25,7 +25,7 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
-    //out: "public_html",
+    out: "public_html"
     //baseUrl:"/"
   },
   optimize: {

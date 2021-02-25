@@ -65,6 +65,12 @@ export const routes = [
     label:'Opdracht 2: Een Git repository beheren'
 },
 {
+    path: '/courses/git/git-workflow',
+    component: 'git-workflow',
+    action: () => import('../views/courses/git/git-workflow.js'),
+    label:'Opdracht 3: Een fork maken van een Git repository'
+},
+{
     path: '(.*)',
     component: 'not-found-view',
     action: () => import('../views/not-found-view.js')

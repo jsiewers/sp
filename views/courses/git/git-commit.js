@@ -10,12 +10,7 @@ class GitCommit extends CourseIndex {
     this.base_url = "/courses/git"
   }
 
-  externalLinks() {
-        return [ html `
-          <h4>Externe links</h4>
-          <link-item href="https://rogerdudler.github.io/git-guide/index.nl.html"><span slot="link">git- een simpele uitleg</span></link-item>
-      ` ]
-  }
+
 
 
   render() {
@@ -67,7 +62,7 @@ git pull origin master
           </code-element>
           </span>
           <span slot="col-2">
-          ${ this.navigation()}
+          ${ this.navigation("GIT")}
           <h3>De opdracht</h3>
           <list-item>Maak een lege repository aan in je projectmap "recepten".</list-item>
           <list-item>Voeg de bestaande bestanden toe aan de stage van je repository</list-item>
@@ -76,6 +71,7 @@ git pull origin master
           <list-item>Maak een lege remote repository aan op github.com. (dus geen readme toevoegen)</list-item>
           <list-item>Voeg aan je lokale repository een link toe naar de remote repository met de naam 'origin'</list-item>
           <list-item>Synchroniseer je bestanden met de repository op Github.</list-item>
+          <video-element video="videoseries?list=PL_dDpKbU0KLZXVPpUU6XVaAZfa6wjZ2Of"></video-element>
           <h3>Resultaten van deze opdracht</h3>
           <checked-item>Een lokale repository met 4 recepten</checked-item>
           <checked-item>Een gesynchroniseerde remote repository op Github met 4 recepten</checked-item>
