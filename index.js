@@ -6,6 +6,7 @@ import "/components/card-element.js"
 import "/components/checked-item.js"
 import "/components/list-item.js"
 import "/components/link-item.js"
+import "/components/add-to-home-screen.js"
 
 //courses
 import "/components/code-element.js"
@@ -28,8 +29,27 @@ import { routes } from './data/routes.js';
 import { Router } from '@vaadin/router';
 
 window.addEventListener('load', () => {
+    //registerSW();
     initRouter();
-});
+  }
+);
+
+async function registerSW() {
+  if ('serviceWorker' in navigator) {
+    console.log('serviceWorker in navigator');
+    try {
+      console.log('pick up serviceworker');
+      await navigator.serviceWorker.register("./sw.js").then(function(result) {
+        console.log("serviceWorker registered, scope: " + result.scope);
+      });
+    } catch (e) {
+      console.log("serviceWorker registration failed");
+    }
+
+  } else {
+    console.log('Your browser does nog support ServiceWorker');
+  }
+}
 
 function initRouter() {
     const router = new Router(document.querySelector('main'));
