@@ -7,21 +7,8 @@ class AddToHomeScreen extends LitElement {
     }
     constructor() {
       super();
-      console.log("in addToHomeScreen");
       this.img = "../img/android/edutorial-icon-192.png";
-      // this.hidePrompt.bind(this);
-      // this.installApp.bind(this);
     }
-
-    // hidePrompt = (e) => {
-    //   console.log("Hide that prompt");
-    //   //this.style.display = "none";
-    // }
-    //
-    //
-    // installApp = (e) => {
-    //   console.log("Install that app");
-    // }
 
     static get styles() {
 
@@ -83,7 +70,6 @@ class AddToHomeScreen extends LitElement {
         <div>
           <p>Add app to your home screen?</p>
           <slot name="links"></slot>
-
         </div>
       </div>
     `;

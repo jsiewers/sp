@@ -66,7 +66,6 @@ export class CourseIndex extends BaseLearningpathView {
     }
 
     navigation(course_id) {
-      console.log(course_id);
       return html`
       <card-element>
         <span slot="title">Links</span>
