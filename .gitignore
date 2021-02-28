@@ -3,3 +3,4 @@
 package-lock.json
 /.idea
 /public_html
+sw_files.php
