@@ -29,10 +29,15 @@ import { routes } from './data/routes.js';
 import { Router } from '@vaadin/router';
 
 window.addEventListener('load', () => {
-    //registerSW();
+    registerSW();
     initRouter();
   }
 );
+
+function initRouter() {
+    const router = new Router(document.querySelector('main'));
+    router.setRoutes(routes);
+}
 
 async function registerSW() {
   if ('serviceWorker' in navigator) {
@@ -49,9 +54,4 @@ async function registerSW() {
   } else {
     console.log('Your browser does nog support ServiceWorker');
   }
-}
-
-function initRouter() {
-    const router = new Router(document.querySelector('main'));
-    router.setRoutes(routes);
 }

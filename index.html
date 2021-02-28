@@ -10,6 +10,7 @@
     <link href="/styles/index.css" rel="stylesheet" type="text/css">
     <script defer src="/styles/main-styles.js" type="module"></script>
     <script defer src="/index.js" type="module"></script>
+    <script src="/aths.js"></script>
     <title>Edutorial</title>
 </head>
 <body>
@@ -21,5 +22,9 @@
         <div id="copyright">&copy; 2021 Alle rechten voorbehouden aan Edutorial.nl</div>
         <div><img src="/img/layout/edutorial-orange.svg" alt="logo" width="122px" height="20px"></div>
 </footer>
+<add-to-home-screen id="aths">
+  <span slot="links"><a href="#" style="float:left;" onClick="hidePrompt();">No thanks</a>
+  <a href="#" style="float:right;" onClick="installApp();">Yes please</a></span>
+</add-to-home-screen>
 </body>
 </html>

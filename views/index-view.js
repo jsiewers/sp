@@ -78,8 +78,6 @@ class IndexView extends LitElement {
             </span>
         </course-element> -->
         <section>
-        <add-to-home-screen>hellokjhkljh<span slot="test">Blaberdie</span></add-to-home-screen>
-
       `;
     }
 }

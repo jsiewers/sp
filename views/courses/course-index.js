@@ -22,6 +22,14 @@ export class CourseIndex extends BaseLearningpathView {
             font-weight:500;
             vertical-align:top;
           }
+
+          ::slotted {
+            font-weight:700;
+          }
+
+          a.same-page {
+            font-weight:700;
+          }
           fa-icon {
             padding-block-start:2px;
           }
@@ -63,7 +71,7 @@ export class CourseIndex extends BaseLearningpathView {
       <card-element>
         <span slot="title">Links</span>
         <span slot="text">
-          ${this.createUrls(routes)}
+          ${this.getInternalLinks(routes)}
           ${this.getExternalLinks(course_id)}
       </span>
       <span slot="link"> </span>
@@ -71,11 +79,12 @@ export class CourseIndex extends BaseLearningpathView {
     `
     }
 
-    createUrls(routes) {
+    getInternalLinks(routes) {
       let urls = []
       let filteredRoutes = routes.filter(route => (route.path.slice(0, this.base_url.length) == this.base_url))
       filteredRoutes.forEach((item, i) => {
-        urls.push(html `<link-item href="${item.path}"><span slot="link">${item.label}</span></link-item>`)
+        let my_label = (location.pathname == item.path) ? html `<b>${item.label}</b>` : html `${item.label}`;
+        urls.push(html `<link-item href="${item.path}"><span slot="link">${my_label}</span></link-item>`)
       });
       return urls;
     }

@@ -3,22 +3,26 @@ class AddToHomeScreen extends LitElement {
     static get properties() {
       return {
         img: { type: String },
-        hidePrompt: { type: Function }
       }
     }
     constructor() {
       super();
       console.log("in addToHomeScreen");
       this.img = "../img/android/edutorial-icon-192.png";
-      this.hidePrompt = (e) => {
-        console.log("Hide that prompt")
-        console.log(this);
-        this.style.display = "none";
-        //document.querySelector("add-to-home-screen").style.display = "none";
-        e.preventDefault()
-      }
-      this.bla = this.hidePrompt.bind(this)
+      // this.hidePrompt.bind(this);
+      // this.installApp.bind(this);
     }
+
+    // hidePrompt = (e) => {
+    //   console.log("Hide that prompt");
+    //   //this.style.display = "none";
+    // }
+    //
+    //
+    // installApp = (e) => {
+    //   console.log("Install that app");
+    // }
+
     static get styles() {
 
         return css`
@@ -28,7 +32,7 @@ class AddToHomeScreen extends LitElement {
               justify-content:flex-end;
               border-radius:8px;
               bottom:0px;
-              left:0px;
+              left:2rem;
               background-color:var(--c1);
               text-align:right;
               padding:1rem;
@@ -38,10 +42,24 @@ class AddToHomeScreen extends LitElement {
               margin-right:1rem;
             }
 
+            p {
+              margin-block-start: 0rem;
+              margin-block-end: 0.5rem;
+            }
+
             a {
               text-decoration:none;
               font-weight:500;
               color: var(--c4);
+              background-color:var(--c3);
+              color: var(--c1);
+              font-weight:300;
+              font-size:0.8rem;
+              border:none;
+              border-radius:4px;
+              padding:5px;
+              padding-top:3px;
+              padding-bottom:3px;
             }
 
 
@@ -56,18 +74,6 @@ class AddToHomeScreen extends LitElement {
        `
      };
 
-
-
-
-
-
-
-     installApp(e) {
-       console.log("Install that app!");
-       console.log(e.bubbles);
-       e.preventDefault();
-     }
-
   render() {
     return html`
       <div id="addToHomeScreen">
@@ -75,24 +81,12 @@ class AddToHomeScreen extends LitElement {
           <img src="${ this.img }" alt="Edutorial logo">
         </div>
         <div>
-          Add app to your home screen<br />
-          <button style="float:left;" @click="${this.bla}">No thanks</button>
-          <button style="float:right;" @click="${this.installApp}">Yes please</button>
+          <p>Add app to your home screen?</p>
+          <slot name="links"></slot>
+
         </div>
       </div>
     `;
   }
-
-        // return html`
-        //   <div id="addToHomeScreen">
-        //     <img src="${ this.img }" alt="Edutorial logo">
-        //     <h3>Add app to your home screen</h3>
-        //     <a href="javascript:void(0) @click="${this._hidePrompt()}">No thanks</a>
-        //     <a href="" @click="${this._installApp()}">Yes, please</a>
-        //     <button @click="${this._installApp()}"></button></h1>
-        //     <h1><slot name="test"></slot></h1>
-        //   </div>
-        // `;
-
 }
 customElements.define('add-to-home-screen', AddToHomeScreen);
