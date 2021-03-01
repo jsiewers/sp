@@ -18,7 +18,9 @@ export const mainStyles = css`
   h3 {
       margin-block-start: 3rem;
       font-size: calc(1em * var(--type-scale) * 1.4);
+      line-height: 2rem;
   }
+  
   h3:first-child {
     margin-block-start: 0px;
   }
