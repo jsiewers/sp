@@ -1,9 +1,8 @@
 
 
-  var cacheName = 'CSv3429';
+  var cacheName = 'CSv8447';
 
   var cachedFiles = ['/aths.js',
-'/cached_files.js',
 '/components/add-to-home-screen.js',
 '/components/article-element.js',
 '/components/article-head.js',
@@ -111,7 +110,6 @@
 '/styles/index.css',
 '/styles/main-styles.js',
 '/styles/prism.css',
-'/sw-old.js',
 '/sw.js',
 '/utility/copy-to-clipboard.js',
 '/utility/navbar.js',
@@ -135,12 +133,11 @@
 '/views/learningpaths/full-stack-developer.svg',
 '/views/not-found-view.js',
 '/views/test-view.js',
-'/workbox-config.js',
 ];
 console.log("in serviceworker");
 
 self.addEventListener('install', function(evt){
-    console.log('Service Worker Install Event');
+    //console.log('Service Worker Install Event');
     //Add the file to the cache
     evt.waitUntil(
         caches.open(cacheName).then(function(cache){
@@ -170,7 +167,7 @@ self.addEventListener('activate', function(evt){
 });
 
 self.addEventListener('fetch', function(evt){
-    console.log('Fetch Event' + evt.request.url);
+    //console.log('Fetch Event' + evt.request.url);
     evt.respondWith(
        caches.match(evt.request).then(function(response){
            return response || fetch(evt.request);

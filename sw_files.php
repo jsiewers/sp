@@ -39,7 +39,7 @@ function createServiceWorker() {
   console.log("in serviceworker");
 
   self.addEventListener('install', function(evt){
-      console.log('Service Worker Install Event');
+      //console.log('Service Worker Install Event');
       //Add the file to the cache
       evt.waitUntil(
           caches.open(cacheName).then(function(cache){
@@ -69,7 +69,7 @@ function createServiceWorker() {
   });
 
   self.addEventListener('fetch', function(evt){
-      console.log('Fetch Event' + evt.request.url);
+      //console.log('Fetch Event' + evt.request.url);
       evt.respondWith(
          caches.match(evt.request).then(function(response){
              return response || fetch(evt.request);

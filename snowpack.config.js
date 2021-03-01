@@ -12,10 +12,11 @@ module.exports = {
   ],
   mount: {
     /* ... */
-  },
+  },  
   plugins: [
-    /* ... */
-  ],
+    ["@snowpack/plugin-optimize", { /* see options below */ }]
+  ]
+  ,
   packageOptions: {
     /* ... */
   },
@@ -27,9 +28,6 @@ module.exports = {
     /* ... */
     out: "public_html"
     //baseUrl:"/"
-  },
-  optimize: {
-
   },
   alias: {
 
