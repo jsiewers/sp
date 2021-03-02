@@ -73,8 +73,12 @@ async function installApp(){
   deferredPrompt = null;
 }
 
-
-
-if (window.matchMedia('(display-mode: standalone)').matches) {
-  console.log('display-mode is standalone');
+function getPWADisplayMode() {
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+  if (document.referrer.startsWith('android-app://')) {
+    return 'twa';
+  } else if (navigator.standalone || isStandalone) {
+    return 'standalone';
+  }
+  return 'browser';
 }
