@@ -1,25 +1,20 @@
-import {
-    LitElement,
-    html,
-    css
-} from 'lit-element';
+import {BaseLearningpathView} from './base-learningpath-view.js';
+import {html} from 'lit-element';
 
 
 
 
-class ContentDeveloperView extends LitElement {
-    static get styles() {
-        return css `
-            `
-    };
+class ContentDeveloperView extends BaseLearningpathView {
+
 
     render() {
         return html `
-        <article-head img="">
+        <article-head img="../img/learningpaths/content-developer.svg">
             <span slot="author">Jan Jaap Siewers</span>
-            <span slot="date">11-02-2021</span>
+            <span slot="date">02-03-2021</span>
             <span slot="header">Content developer</span>
         </article-head>
+        <section>
         <article-element>
             <span slot="header">Wat is een content developer</span>
             <span slot="col-1">
@@ -33,69 +28,20 @@ class ContentDeveloperView extends LitElement {
             </span>
         </article-element>
         <article-element>
-            <span slot="header">Wat kan een content developer</span>
+          <span slot="header"></span>
             <span slot="col-1">
-                <h3>Welke verantwoordelijkheden heeft een content developer</h3>
-                Coming up with content goals and strategies and pitching ideas to the Marketing and Communications Directors. Collaborating with other departments and team members and brainstorming subjects for creative content. Creating unique, simple-to-understand, and user-friendly content using good SEO techniques.
-                Writing new web content and editing existing content.
-                Editing and proofreading new content before publication.
-                Managing the distribution of content through our various channels, including social media.
-                Analyzing performance indicators and web traffic and determining the effectiveness of created content.
-            </span>
-            <span slot="col-2">
-                <h3>Welke skills en diploma's heeft een content developer nodig</h3>
-                Associate's or Bachelor's degree in Computer Science, Marketing, Mass Communication, or a related field.
-                Experience in Copywriting, Graphic Design, Programming, or a related field may be advantageous.
-                Strong working knowledge of content management software, including Asana, WordPress, Photoshop, and Flash.
-                Good working knowledge of HTML and SEO.
-                Excellent written and verbal communication skills.
-                Strong attention to detail, multitasking, and analytical skills.
-                Ability to work independently and as part of a team.
-            </span>
-        </article-element>
-        <article-element>
-            <span slot="header"><h3>leertraject</h3></span>
-            <span slot="col-1">
-            </span>
-            <span slot="col-2">
-            </span>
-        </article-element>
-        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_html5.svg" href="/course-html5">
-            <span slot="title">
-              Beginnerscursus HTML5
-            </span>
-            <span slot="text">
-              kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f
-            </span>
-        </course-element>
-        <course-element video="4" onderwerpen="2" projecten="6" src="img/courses/course_css.svg" href="/course-css">
-            <span slot="title">Starten met CSS3</span>
-            <span slot="text">kssdlfjks dlfkjsdf oweir jsdfklnwerop svdn,xnv sefjwe pfosdj fxdkvnoefjw pefojs f </span>
-        </course-element>
-        <course-element video="16" onderwerpen="2" projecten="12" src="img/courses/course_php8_beginners.svg" href="/course-php">
-            <span slot="title">Beginnerscursus PHP 8</span>
-            <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
-            </span>
-        </course-element>
-        <course-element video="16" onderwerpen="2" projecten="12" src="img/courses/course_wp.svg">
-            <span slot="title">Wordpress</span>
-            <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
-            </span>
-        </course-element>
-        <course-element video="2" onderwerpen="1" projecten="5" src="img/courses/course_seo.svg">
-            <span slot="title"><SEO</span>
-            <span slot="text">Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
-            </span>
-        </course-element>
-        <course-element video="16" onderwerpen="2" projecten="12" src="img/courses/course_wp_php.svg">
-            <span slot="title">
-            Wordpress plugins en thema's met CSS en PHP
-            </span>
-            <span slot="text">
-              Deze cursus is voor beginnende programmeurs die niet of niet veel ervaring hebben met PHP. PHP is een taal waarmee je vooral websites en webapplicaties mee kunt bouwen. Het is een zgn. server-side taal. PHP wordt uitgevoerd op een server en niet in je browser.<br />
+                <h3>Wat doet een full game developer?</h3>
 
+              </span>
+            <span slot="col-2">
+            <h3>Wat ga je leren?</h3>
+              <p></p>
             </span>
-        </course-element>
+        </article-element>
+
+        ${this.getCourses(["GIT", "ADOBE_GD", "HTML-5", "CSS", "SCRUM", "GITHUB", "JS", "WP","SEO"])}
+
+        </section>
 
         `;
     }

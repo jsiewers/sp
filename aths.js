@@ -1,4 +1,7 @@
 
+let pwaSupport;
+let deferredPrompt;
+
 if('serviceWorker' in navigator){
     pwaSupport = true;
     //register the service worker
@@ -14,40 +17,31 @@ if('serviceWorker' in navigator){
     console.log('Service Workers Not Supported');
 }
 
-var installEvt;
-window.addEventListener('beforeinstallprompt', function(evt){
-    console.log('Before Install Prompt');
-    installEvt = evt;
-    evt.preventDefault();
-    console.log(document.getElementById('aths'));
-    document.getElementById('aths').style.display = 'block';
+window.addEventListener('beforeinstallprompt', function(e){
+  e.preventDefault();
+  deferredPrompt = e;
+  showInstallPromotion();
+  console.log('Before Install Prompt');
 });
 
-function hidePrompt(){
-    console.log("hiding.......");
-    //console.log(document.getElementById('aths'));
-    document.getElementById('aths').style.display = 'none';
-}
-
-function installApp(){
-    hidePrompt();
-    if(installEvt) {
-      installEvt.prompt();
-      installEvt.userChoice.then(function(result){
-          if(result.outcome === 'accepted')
-              console.log('App Installed');
-          else
-              console.log('App Not Installed');
-      });
-    } else {
-      console.log("Beforeinstallprompt event heeft niet plaatsgevonden");
-    }
-}
-
-window.addEventListener('appinstalled', function(evt){
-    console.log('App Installed Event');
-    hidePrompt();
+window.addEventListener('appinstalled', (event) => {
+  // Clear the deferredPrompt so it can be garbage collected
+  hideInstallPromotion();
+  deferredPrompt = null;
+  console.log('👍', 'appinstalled', event);
 });
+
+
+function showInstallPromotion() {
+  document.getElementById('aths').style.display = 'block';
+
+}
+function hideInstallPromotion() {
+  document.getElementById('aths').style.display = 'none';
+
+}
+
+
 
 window.onload = function(){
     console.log("in window onload function, checking pwa support");
@@ -59,13 +53,27 @@ window.onload = function(){
                 var lastShown = parseInt(localStorage.getItem('lastShown'));
                 var now = new Date().getTime();
                 if(isNaN(lastShown) || (lastShown + 1000*60*60*24*7) <= now){
-                    document.getElementById('instructions').style.display = 'block';
+                    //document.getElementById('instructions').style.display = 'block';
                     localStorage.setItem('lastShown', now);
                 }
             }
         }
     }
 };
+
+async function installApp(){
+  hideInstallPromotion();
+  // Show the install prompt
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  const { outcome } = await deferredPrompt.userChoice;
+  // Optionally, send analytics event with outcome of user choice
+  console.log(`User response to the install prompt: ${outcome}`);
+  // We've used the prompt, and can't use it again, throw it away
+  deferredPrompt = null;
+}
+
+
 
 if (window.matchMedia('(display-mode: standalone)').matches) {
   console.log('display-mode is standalone');

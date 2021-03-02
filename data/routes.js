@@ -29,6 +29,12 @@ export const routes = [
     label:'Frontend developer'
 },
 {
+    path: '/game-developer',
+    component: 'game-developer-view',
+    action: () => import('../views/learningpaths/game-developer-view.js'),
+    label:'Game developer'
+},
+{
     path: '/courses',
     component: 'course-index',
     action: () => import('../views/courses/course-index.js'),

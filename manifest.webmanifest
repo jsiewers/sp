@@ -6,6 +6,7 @@
   "background_color": "#FF8000",
   "description": "Tutorials about anything web programming and design",
   "theme_color": "#052c44",
+
   "icons": [
     {
       "src": "./img/android/edutorial-icon-192.png",

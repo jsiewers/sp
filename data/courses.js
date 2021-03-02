@@ -160,4 +160,34 @@ export const courses = [
     subjects: 0,
     projects: 0
   },
+  {
+    tags:["content-developer", "interaction-designer"],
+    title: "Adobe Graphic Design",
+    code: "ADOBE_GD",
+    img: "../../img/courses/course_adobe_gd.svg",
+    text: "Iedere designer die iets wil maken voor print of web moet een expert zijn in de grafische programma's van Adobe. Adobe is al sinds de jaren '90 marktleider op het gebied van grafische software. In deze cursus leer je de basisprincipes van Adobe Photoshop en Illustrator. De cursus is vooral geënt op creatie van designs voor webapplicaties en games.",
+    video: 0,
+    subjects: 0,
+    projects: 0
+  },
+  {
+    tags:["content-developer", "interaction-designer"],
+    title: "Adobe User Interface Design",
+    code: "ADOBE_UI",
+    img: "../../img/courses/course_adobe_ui.svg",
+    text: "Bij het vormgeven van applicaties en games is niet alleen uiterlijk belangrijk, maar juist ook interactiviteit en gebruiksvriendelijkheid. In deze cursus leer je de 'best practices' ten aanzien van user interface design. Je leert werken met applicaties zoals Adobe XD om interfaces vorm te geven en prototypes te bouwen.",
+    video: 0,
+    subjects: 0,
+    projects: 0
+  },
+  {
+    tags:["content-developer", "interaction-designer"],
+    title: "Search Engine Optimization",
+    code: "SEO",
+    img: "../../img/courses/course_seo.svg",
+    text: "Search engine optimization gaat over het vindbaar maken van websites. Natuurlijk wil je dat jouw website op 1 staat in de rankings van Google en opkomt als eerste zoekresultaat. Het vindbaar maken van pagina's is een vak op zich. Het gaat om optimalisatie van tekst en beeld. In deze cursus leer je de do's en don'ts van search engine optimization",
+    video: 0,
+    subjects: 0,
+    projects: 0
+  },
 ];
