@@ -27,17 +27,6 @@ class ContentDeveloperView extends BaseLearningpathView {
                 To be successful as a Content Developer, you should have great communication, research, and teamwork skills. Ultimately, a top-notch Content Developer has a good working knowledge of content management software as well as a basic knowledge of HTML and an eye for detail.
             </span>
         </article-element>
-        <article-element>
-          <span slot="header"></span>
-            <span slot="col-1">
-                <h3>Wat doet een full game developer?</h3>
-
-              </span>
-            <span slot="col-2">
-            <h3>Wat ga je leren?</h3>
-              <p></p>
-            </span>
-        </article-element>
 
         ${this.getCourses(["GIT", "ADOBE_GD", "HTML-5", "CSS", "SCRUM", "GITHUB", "JS", "WP","SEO"])}
 
